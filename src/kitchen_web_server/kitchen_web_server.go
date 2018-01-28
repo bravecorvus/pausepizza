@@ -3,8 +3,8 @@ package main
 import (
 	"net/http"
 
-	"./v4"
-	"./v5"
+	"github.com/gilgameshskytrooper/pausepizza/v4"
+	"github.com/gilgameshskytrooper/pausepizza/v5"
 
 	"github.com/gorilla/mux"
 	"github.com/robfig/cron"
