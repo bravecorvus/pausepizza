@@ -3,14 +3,14 @@
 package v5
 
 import (
-	"../appetizers"
-	"../auth"
-	"../desserts"
-	"../drinks"
-	"../ingredients"
-	"../landing"
-	"../pizza"
-	"../sides"
+	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/appetizers"
+	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/auth"
+	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/desserts"
+	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/drinks"
+	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/ingredients"
+	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/landing"
+	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/pizza"
+	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/sides"
 )
 
 // ObjectStore is a large struct which contains pointers to the struct representations of all API endpoints for the Client Side Ordering App.

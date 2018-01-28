@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"time"
 
-	"../auth"
-	"../response"
+	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/auth"
+	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/response"
 
 	"github.com/gorilla/mux"
 )

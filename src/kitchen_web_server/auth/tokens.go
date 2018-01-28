@@ -7,7 +7,7 @@ import (
 	"math/rand"
 	"time"
 
-	"../utils"
+	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/utils"
 )
 
 const (

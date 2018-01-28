@@ -14,8 +14,8 @@ import (
 	"net/http"
 	"os"
 
-	"../response"
-	"../utils"
+	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/response"
+	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/utils"
 
 	"github.com/disintegration/gift"
 	"github.com/harrydb/go/img/grayscale"

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"io/ioutil"
 
-	"../utils"
+	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/utils"
 )
 
 type IngredientsList struct {

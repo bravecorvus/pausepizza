@@ -8,8 +8,8 @@ import (
 	"strings"
 	"time"
 
-	"../auth"
-	"../utils"
+	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/auth"
+	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/utils"
 )
 
 type Img struct {

@@ -5,9 +5,11 @@ import (
 	"fmt"
 	"io/ioutil"
 
-	"../utils"
+	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/utils"
 )
 
+// The most parent struct of quesadilla
+// Compare at v5/appetizers/quesadillalist.json with JSON tags at the end of each field declaration line for a better idea on how everything works
 type QuesadillaList struct {
 	Quesadillas []Quesadilla `json:"list"`
 }
@@ -23,6 +25,7 @@ type Quesadilla struct {
 	Api                    string        `json:"api"`
 }
 
+// Initialize() will initialize the values for an existing QuesadillaList object by getting data from the respective endpoint list.json file and unmarshaling them into the struct.
 func (ques_list *QuesadillaList) Initialize() {
 	raw, err1 := ioutil.ReadFile(utils.AssetsDir() + "v5/appetizers/quesadilla/list.json")
 	if err1 != nil {
@@ -34,6 +37,7 @@ func (ques_list *QuesadillaList) Initialize() {
 	}
 }
 
+// WriteFile() will write the current values of the QuesadillaList instance that this function is operating on into the relevant list.json file
 func (ques_list *QuesadillaList) WriteFile() {
 	writeFile, err1 := json.MarshalIndent(ques_list, "", "\t")
 	if err1 != nil {
@@ -45,6 +49,8 @@ func (ques_list *QuesadillaList) WriteFile() {
 	}
 }
 
+// Update() will reassign the pointer to the QuesadillaList that this function will operate on to a new pointer passed as an argument.
+// Furthermore, it will write these changes back to the JSON files.
 func (elem *QuesadillaList) Update(arg *QuesadillaList) {
 
 	*elem = *arg
@@ -52,6 +58,9 @@ func (elem *QuesadillaList) Update(arg *QuesadillaList) {
 
 }
 
+// Function FindFilenames() will look for a given title in its list of objects and return two strings:
+//	1) The link to the normal colored image for an item
+//	1) The link to the monochromatic image for an item (used to represent items that cannot be clicked on the menu in the Client Ordering App.
 func (elem *QuesadillaList) FindFilenames(title, parameter string) (string, string) {
 	for _, item := range elem.Quesadillas {
 		// fmt.Println(item.Title)
