@@ -54,9 +54,15 @@
 //	v5/sides
 // The Kitchen app also has a few endpoints that does not exist at all for the Client Ordering app.
 //	v5/auth
+// auth is the endpoint storing all valid username and passwords
 //	v5/tokens
-//	v5/order
+// tokens is the endpoint that serves the JSON file with the list of currently valid tokens
+//	v5/orders
+// orders is the endpoint that implements notifications websockets.
+// **Implement when done**
+//
 // GET Examples
+//
 // GET hosts all files in assets/ directly as JSON files (similar to the Client Ordering app).
 // Here are some examples of how to use curl to test these endpoints.
 //	curl [server address]/v5/[generated token]/pizza
@@ -71,5 +77,6 @@
 //	curl -H "Content-Type: application/json" -X POST -d '{"list":[{"title":"Poop","available":true,"deliverable":true,"image":{"normal":"files/pizzabuild.jpg","monochrome":"files/pizzabuild.mono.jpg"}},{"title":"Specialty Pizza","available":true,"deliverable":true,"image":{"normal":"files/pizzaspecialty.jpg","monochrome":"files/pizzaspecialty.mono.jpg"}}]}' [server address]/v5/[generated token]/pizza
 //
 // Web Sockets
+//
 // **To be writen once the websockets part is done**
 package main
