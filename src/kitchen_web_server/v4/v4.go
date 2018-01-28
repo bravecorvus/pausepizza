@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"time"
 
 	"../auth"
 	"../utils"
@@ -108,7 +109,7 @@ func PostAPI(w http.ResponseWriter, r *http.Request) {
 		}
 
 		if authorized_users.Validate(query.Username, query.Password) {
-			tokens := auth.GenerateNewToken(query.Username)
+			tokens := auth.GenerateNewToken(query.Username, 24*time.Hour)
 			json.NewEncoder(w).Encode(tokens.Tokens[len(tokens.Tokens)-1])
 		}
 	}
