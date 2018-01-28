@@ -9,7 +9,7 @@ import (
 )
 
 // The most parent struct of quesadilla
-// Compare at v5/appetizers/quesadillalist.json with JSON tags at the end of each field declaration line for a better idea on how everything works
+// Compare at v5/appetizers/quesadillalist.json with JSON tags at the end of each field declaration line for a better idea on how everything works.
 type QuesadillaList struct {
 	Quesadillas []Quesadilla `json:"list"`
 }

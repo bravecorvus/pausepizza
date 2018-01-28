@@ -76,7 +76,15 @@
 // For example, in order to change the Pizza variables in curl, you would something like:
 //	curl -H "Content-Type: application/json" -X POST -d '{"list":[{"title":"Poop","available":true,"deliverable":true,"image":{"normal":"files/pizzabuild.jpg","monochrome":"files/pizzabuild.mono.jpg"}},{"title":"Specialty Pizza","available":true,"deliverable":true,"image":{"normal":"files/pizzaspecialty.jpg","monochrome":"files/pizzaspecialty.mono.jpg"}}]}' [server address]/v5/[generated token]/pizza
 //
+// Uploading a picture follows this pattern in curl:
+//	curl -F 'file=@filename.JPEG'  [server address]/v5/[generated token]/pizza/specialty/Chicken_Bacon_Ranch_Pizza.Large
+// The server is built to handle both JPEG and PNG files and once it verifies that the uploaded image is a valid JPEG or PNG file, it will first send the success response to the sender, and asyncronously process the image using a gorouting (see package photoshopjr).
+// The processing that occurs here is to convert the image to JPEG if it was a PNG, to crop the image to be 500x500px (upsizing the image if it is too smal and cropping it if too large), and finally a separate monochromaic image is also generated.
+//
 // Web Sockets
 //
+// Struct Documentation
+//
+// Since most of the structs in this program follow the same exact pattern, once one has been explained, the others will be self explanatory
 // **To be writen once the websockets part is done**
 package main

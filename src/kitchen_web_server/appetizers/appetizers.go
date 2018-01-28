@@ -1,4 +1,4 @@
-// Package appetizers contains the structs to store the information about the appetizers endpoints as well as any endpoint under appetizers
+// Package appetizers contains the structs to store the information about the appetizers endpoints as well as any endpoint under appetizers.
 package appetizers
 
 import (

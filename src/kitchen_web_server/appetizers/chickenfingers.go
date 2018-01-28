@@ -9,7 +9,7 @@ import (
 )
 
 // The most parent struct of chicken finger
-// Compare at v5/appetizers/chickenfingers/list.json with JSON tags at the end of each field declaration line for a better idea on how everything works
+// Compare at v5/appetizers/chickenfingers/list.json with JSON tags at the end of each field declaration line for a better idea on how everything works.
 type ChickenfingersList struct {
 	Chickenfingers []Chickenfinger `json:"list"`
 }
