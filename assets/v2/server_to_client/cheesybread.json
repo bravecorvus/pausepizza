@@ -1,0 +1,10 @@
+{
+  "price" : 3,
+  "image" : "",
+  "ingredients" : {
+    "meats" : ["Pepperoni"],
+    "cheese" : ["Mozzarella"],
+    "toppings" : [],
+    "sauce": ["Tomato"]
+  }
+}

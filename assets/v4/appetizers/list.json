@@ -1,0 +1,24 @@
+{
+	"list": [
+		{
+			"title": "Cheesy Bread",
+			"available": true,
+			"deliverable": true,
+			"image": {
+				"normal": "",
+				"monochrome": ""
+			},
+			"api": "v4/appetizers/cheesybread"
+		},
+		{
+			"title": "Quesadilla",
+			"available": true,
+			"deliverable": true,
+			"image": {
+				"normal": "",
+				"monochrome": ""
+			},
+			"api": "v4/appetizers/quesadilla"
+		}
+	]
+}

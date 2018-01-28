@@ -1,0 +1,17 @@
+{
+  "list" : [
+    {
+      "title" : "Cheesy Bread",
+      "freeIngredients" : ["Mozzarella", "Bread"],
+      "addableIngredients" : ["Mozzarella", "Pepperoni", "Bacon"],
+      "addableIngredientTypes" : ["DippingSauce"],
+      "price" : 5,
+      "pricePerExtra" : 0.25,
+      "image" : {
+        "normal" : "files/cheesybread.jpg",
+        "monochrome" : "files/cheesybread.mono.jpg"
+      },
+      "api" : "v5/ingredients"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "list" : [
+    {
+      "title" : "Chicken Fingers",
+      "freeIngredients" : ["Chicken Fingers", "DippingSauce"],
+      "addableIngredients" : [],
+      "addableIngredientTypes" : ["DippingSauce"],
+      "price" : 5,
+      "pricePerExtra" : 0.25,
+      "image" : {
+        "normal" : "",
+        "monochrome" : ""
+      },
+      "api" : "v4/ingredients"
+    }
+  ]
+}

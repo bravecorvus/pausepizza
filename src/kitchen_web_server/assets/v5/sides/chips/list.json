@@ -1,0 +1,30 @@
+{
+  "list" : [
+    {
+      "title" : "Chips and Cheese",
+      "freeIngredients" : ["Chips and Cheese"],
+      "addableIngredients" : [],
+      "addableIngredientTypes" : [],
+      "price" : 1,
+      "pricePerExtra" : 0.00,
+      "image" : {
+        "normal" : "files/chipsandcheese.jpg",
+        "monochrome" : "files/chipsandcheese.mono.jpg"
+      },
+      "api" : "v5/checkout"
+    },
+    {
+      "title" : "Chips and Salsa",
+      "freeIngredients" : ["Chips and Salsa"],
+      "addableIngredients" : [],
+      "addableIngredientTypes" : [],
+      "price" : 1,
+      "pricePerExtra" : 0.00,
+      "image" : {
+        "normal" : "files/chipsandsalsa.jpg",
+        "monochrome" : "files/chipsandsalsa.mono.jpg"
+      },
+      "api" : "v5/checkout"
+    }
+  ]
+}

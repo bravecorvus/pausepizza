@@ -1,0 +1,6 @@
+{[
+  "Pizza" :{
+    "image" : "",
+    "api" : "v2/food/pizza/list"
+  }
+]}

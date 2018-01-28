@@ -1,0 +1,13 @@
+{
+  "price" : {
+    "large" : 8,
+    "small" : 6.50
+  },
+  "image" : "",
+  "ingredients" : {
+    "meats" : ["Pepperoni"],
+    "cheese" : ["Mozzarella"],
+    "toppings" : [],
+    "sauce": ["Tomato"]
+  }
+}

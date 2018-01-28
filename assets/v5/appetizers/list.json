@@ -1,0 +1,34 @@
+{
+  "list" : [
+    {
+      "title": "Cheesy Bread",
+      "available" : true,
+      "deliverable" : true,
+      "image" : {
+        "normal" : "files/cheesybread.jpg",
+        "monochrome" : "files/cheesybread.mono.jpg"
+      },
+      "api" : "v5/appetizers/cheesybread"
+    },
+    {
+      "title": "Chicken Fingers",
+      "available" : true,
+      "deliverable" : true,
+      "image" : {
+        "normal" : "files/chickenfingers.jpg",
+        "monochrome" : "files/chickenfingers.mono.jpg"
+      },
+      "api" : "v5/appetizers/clickenfingers"
+    },
+    {
+      "title": "Quesadilla",
+      "available" : true,
+      "deliverable" : true,
+      "image" : {
+        "normal" : "files/quesadilla.jpg",
+        "monochrome" : "files/quesadilla.mono.jpg"
+      },
+      "api" : "v5/appetizers/quesadilla"
+    }
+  ]
+}

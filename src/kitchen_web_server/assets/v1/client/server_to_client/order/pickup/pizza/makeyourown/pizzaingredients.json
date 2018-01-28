@@ -1,0 +1,71 @@
+{
+  "Meats" : [
+    "Chicken": {
+      "available": true,
+      "price" : 3.0,
+      "image" : "https://images-gmi-pmc.edge-generalmills.com/549e441a-eed1-4e39-8ad3-6ae60ab3ad7f.jpg"
+    },
+    "Bacon" : {
+      "available": true,
+      "price" : 2.0,
+      "image" : "https://upload.wikimedia.org/wikipedia/commons/3/31/Made20bacon.png"
+    },
+    "Sausage" : {
+      "available": false,
+      "price" : 3.0,
+      "image" : "https://az808821.vo.msecnd.net/content/images/thumbs/0000239_polish-pork-sausages-sugar-free-five-025-lb-sausages_560.jpeg"
+    },
+    "Pepperoni" : {
+      "available": true,
+      "price" : 2.0,
+      "image" : "https://az808821.vo.msecnd.net/content/images/thumbs/0000239_polish-pork-sausages-sugar-free-five-025-lb-sausages_560.jpeg"
+    }
+  ],
+  "Toppings" : [
+    "Pepper" : {
+      "available": true,
+      "price" : 1.0,
+      "image" : ""
+    },
+    "Mushrooms" : {
+      "available": true,
+      "price" : 2.0,
+      "image" : ""
+    },
+    "Diced Tomato" : {
+      "available": true,
+      "price" : 3.0,
+      "image" : ""
+    },
+    "Pineapple" : {
+      "available": true,
+      "price" : 3.0,
+      "image" : ""
+    }
+  ],
+  "Sauces": [
+    "Tomato" : {
+      "available": true,
+      "price" : 2.0,
+      "image" : ""
+    },
+    "Marinara" : {
+      "available": true,
+      "price" : 2.5,
+      "image" : ""
+    },
+    "Ranch" : {
+      "available": true,
+      "price" : 3.0,
+      "image" : ""
+    }
+  ],
+  "SpecialtyPizzaList" : [
+    "Chicken Bacon Ranch" : {
+      "Meats": ["Bacon", "Chicken"],
+      "Toppings" : [],
+      "Sauce" : ["Ranch"],
+      "image" : ""
+    }
+  ]
+}

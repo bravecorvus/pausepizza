@@ -1,0 +1,48 @@
+"pauseinfo" : {
+  "kitchenOpen ": true,
+  "deliveryAvailable" : true,
+  "ovenOn" : true,
+  "lateMenu" : true
+},
+"list" : [
+  {
+    "title": "Pizza",
+    "image" : {
+      "normal" : "",
+      "monochrome" : ""
+    },
+    "api" : "v3/pizza/list"
+  },
+  {
+    "title": "Dessert",
+    "image" : {
+      "normal" : "",
+      "monochrome" : ""
+    },
+    "api" : "v3/desserts/list"
+  },
+  {
+    "title": "Appetizers",
+    "image" : {
+      "normal" : "",
+      "monochrome" : ""
+    },
+    "api" : "v3/appetizers/list"
+  },
+  {
+    "title": "Drinks",
+    "image" : {
+      "normal" : "",
+      "monochrome" : ""
+    },
+    "api" : "v3/drinks/list"
+  },
+  {
+    "title": "Sides",
+    "image" : {
+      "normal" : "",
+      "monochrome" : ""
+    },
+    "api" : "v3/sides/list"
+  }
+]

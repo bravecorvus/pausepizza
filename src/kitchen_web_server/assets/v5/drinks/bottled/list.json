@@ -1,0 +1,43 @@
+{
+  "list" : [
+    {
+      "title" : "Strawberry Kombucha",
+      "freeIngredients" : ["Strawberry Kombucha"],
+      "addableIngredients" : [],
+      "addableIngredientTypes" : [],
+      "price" : 3,
+      "pricePerExtra" : 0.00,
+      "image" : {
+        "normal" : "files/bottledstrawberryombucha.jpg",
+        "monochrome" : "files/bottledstrawberryombucha.mono.jpg"
+      },
+      "api" : "v5/checkout"
+    },
+    {
+      "title" : "Peace Ice Tea",
+      "freeIngredients" : ["Peace Ice Tea"],
+      "addableIngredients" : [],
+      "addableIngredientTypes" : [],
+      "price" : 3,
+      "pricePerExtra" : 0.00,
+      "image" : {
+        "normal" : "files/bottledpeaceicetea.jpg",
+        "monochrome" : "files/bottledpeaceicetea.mono.jpg"
+      },
+      "api" : "v5/checkout"
+    },
+    {
+      "title" : "Diet Pepsi",
+      "freeIngredients" : ["Diet Pepsi"],
+      "addableIngredients" : [],
+      "addableIngredientTypes" : [],
+      "price" : 1.5,
+      "pricePerExtra" : 0.00,
+      "image" : {
+        "normal" : "files/bottleddietpepsi.jpg",
+        "monochrome" : "files/bottleddietpepsi.mono.jpg"
+      },
+      "api" : "v5/checkout"
+    }
+  ]
+}

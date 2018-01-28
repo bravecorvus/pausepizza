@@ -1,0 +1,115 @@
+{
+	"list": [
+		{
+			"title": "Vanilla Ice Cream",
+			"freeIngredients": [
+				"Vanilla Ice Cream",
+				"Cone",
+				"Cup"
+			],
+			"addableIngredients": [
+				"Cookie",
+				"Fountain Rootbeer"
+			],
+			"price": [
+				{
+					"increment": "Cup",
+					"price": 1
+				},
+				{
+					"increment": "Cone",
+					"price": 1
+				}
+			],
+			"pricePerExtra": [
+				{
+					"increment": "Cookie",
+					"pricePerExtra": 1.25
+				},
+				{
+					"increment": "Rootbeer",
+					"pricePerExtra": 1.5
+				}
+			],
+			"image": {
+				"normal": "",
+				"monochrome": ""
+			},
+			"api": "v4/ingredients"
+		},
+		{
+			"title": "Chocolate Ice Cream",
+			"freeIngredients": [
+				"Chocolate Ice Cream",
+				"Cone",
+				"Cup"
+			],
+			"addableIngredients": [
+				"Cookie",
+				"Fountain Rootbeer"
+			],
+			"price": [
+				{
+					"increment": "Cup",
+					"price": 1
+				},
+				{
+					"increment": "Cone",
+					"price": 1
+				}
+			],
+			"pricePerExtra": [
+				{
+					"increment": "Cookie",
+					"pricePerExtra": 1.25
+				},
+				{
+					"increment": "Rootbeer",
+					"pricePerExtra": 1.5
+				}
+			],
+			"image": {
+				"normal": "",
+				"monochrome": ""
+			},
+			"api": "v4/ingredients"
+		},
+		{
+			"title": "Twist Ice Cream",
+			"freeIngredients": [
+				"Twist Ice Cream",
+				"Cone",
+				"Cup"
+			],
+			"addableIngredients": [
+				"Cookie",
+				"Fountain Rootbeer"
+			],
+			"price": [
+				{
+					"increment": "Cup",
+					"price": 1
+				},
+				{
+					"increment": "Cone",
+					"price": 1
+				}
+			],
+			"pricePerExtra": [
+				{
+					"increment": "Cookie",
+					"pricePerExtra": 1.25
+				},
+				{
+					"increment": "Rootbeer",
+					"pricePerExtra": 1.5
+				}
+			],
+			"image": {
+				"normal": "",
+				"monochrome": ""
+			},
+			"api": "v4/ingredients"
+		}
+	]
+}

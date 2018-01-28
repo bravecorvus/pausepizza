@@ -1,0 +1,12 @@
+{[
+  "Chicken Bacon Ranch" : {
+    "available" : true,
+    "api" : "v2/food/pizza/specialty/chickenbaconranch",
+    "image" : ""
+  },
+  "Ole Pizza" : {
+    "available" : true,
+    "api" : "v2/food/pizza/specialty/olepizza",
+    "image" : ""
+  }
+]}

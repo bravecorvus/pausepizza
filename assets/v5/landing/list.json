@@ -1,0 +1,50 @@
+{
+	"pauseinfo": {
+		"kitchenOpen": false,
+		"deliveryAvailable": false,
+		"ovenOn": false,
+		"lateMenu": false
+	},
+	"list": [
+		{
+			"title": "Pizza",
+			"image": {
+				"normal": "files/pizza.jpg",
+				"monochrome": "files/pizza.mono.jpg"
+			},
+			"api": "v5/pizza"
+		},
+		{
+			"title": "Dessert",
+			"image": {
+				"normal": "files/dessert.jpg",
+				"monochrome": "files/dessert.mono.jpg"
+			},
+			"api": "v5/desserts"
+		},
+		{
+			"title": "Appetizers",
+			"image": {
+				"normal": "files/appetizers.jpg",
+				"monochrome": "files/appetizers.mono.jpg"
+			},
+			"api": "v5/appetizers"
+		},
+		{
+			"title": "Drinks",
+			"image": {
+				"normal": "files/drinks.jpg",
+				"monochrome": "files/drinks.mono.jpg"
+			},
+			"api": "v5/drinks"
+		},
+		{
+			"title": "Sides",
+			"image": {
+				"normal": "files/sides.jpg",
+				"monochrome": "files/sides.mono.jpg"
+			},
+			"api": "v5/sides"
+		}
+	]
+}

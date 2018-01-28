@@ -1,0 +1,28 @@
+"list" : [
+  {
+    "title": "Chicken Bacon Ranch",
+    "available" : true,
+    "price" : {
+      "large" : 11,
+      "small" : 11
+    },
+    "image" : {
+      "normal" : "",
+      "monochrome" : ""
+    },
+    "api" : "v3/pizza/specialty/chickenbaconranch"
+  },
+  {
+    "title": "Ole Pizza",
+    "available" : true,
+    "price" : {
+      "large" : 11,
+      "small" : 11
+    },
+    "image" : {
+      "normal" : "",
+      "monochrome" : ""
+    },
+    "api" : "v3/pizza/specialty/olepizza"
+  }
+]

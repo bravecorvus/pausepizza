@@ -1,0 +1,25 @@
+{
+	"checkoutInfo": {
+		"name": "Mazen",
+		"phone": "507",
+		"orderNumber": 1000000,
+		"orderTypeDelivery": true,
+		"itemsOrdered": [
+			{
+				"category": "Appetizers",
+				"item": "Cheese Quesadilla",
+				"increment": "Full",
+				"extraIncrement": ""
+			},
+			{
+				"category": "Pizza",
+				"item": "Build Your Own Pizza",
+				"increment": "Large",
+				"extraIncrement": "Pepperoni"
+		}
+	],
+		"price": 13.00,
+		"orderStatus": "",
+		"orderTime": ""
+	}
+}

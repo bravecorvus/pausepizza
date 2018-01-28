@@ -1,0 +1,24 @@
+{
+  "list" : [
+    {
+      "title": "Fountain Drinks",
+      "available" : true,
+      "deliverable" : true,
+      "image" : {
+        "normal" : "files/fountain.jpg",
+        "monochrome" : "files/fountain.mono.jpg"
+      },
+      "api" : "v5/drinks/fountain"
+    },
+    {
+      "title": "Bottled Drinks",
+      "available" : true,
+      "deliverable" : true,
+      "image" : {
+        "normal" : "files/bottled.jpg",
+        "monochrome" : "files/bottled.mono.jpg"
+      },
+      "api" : "v5/drinks/bottled"
+    }
+  ]
+}

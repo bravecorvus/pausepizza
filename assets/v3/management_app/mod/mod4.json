@@ -1,0 +1,8 @@
+{
+  "type" : "Milkshake",
+  "name" : "",
+  "modtype" : "pricechange",
+  "mod" : {
+    "large" : 9
+  }
+}

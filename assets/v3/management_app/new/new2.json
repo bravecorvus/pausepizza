@@ -1,0 +1,17 @@
+{
+  "type" : "Milkshake",
+  "category" : "Specialty",
+  "name" : "Blood Orgy",
+  "image" : "",
+  "priceDifference" : true,
+  "price" : [
+    {
+      "increment" : "Large",
+      "price" : 11
+    },
+    {
+      "increment" : "Small",
+      "price" : 8
+    }
+  ]
+}

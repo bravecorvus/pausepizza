@@ -1,0 +1,363 @@
+{
+  "list" : [
+
+    {
+      "name" : "Chicken",
+      "type" : "Meat",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Bacon",
+      "type" : "Meat",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Sausage",
+      "type" : "Meat",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Canadian Bacon",
+      "type" : "Meat",
+      "available" : true,
+      "image" : ""
+    },
+
+
+
+    {
+      "name" : "Pinapple",
+      "type" : "Veggie",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Spinach",
+      "type" : "Veggie",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Onion",
+      "type" : "Veggie",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Tomato",
+      "type" : "Veggie",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Mushroom",
+      "type" : "Veggie",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Green Pepper",
+      "type" : "Veggie",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Black Olive",
+      "type" : "Veggie",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Jalapeno",
+      "type" : "Veggie",
+      "available" : true,
+      "image" : ""
+    },
+
+
+
+    {
+      "name" : "Large Dough",
+      "type" : "Dough",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Small Dough",
+      "type" : "Dough",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Bagel Dough",
+      "type" : "Dough",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Pita Dough",
+      "type" : "Dough",
+      "available" : true,
+      "image" : ""
+    },
+
+
+
+    {
+      "name" : "Mozzarella",
+      "type" : "Cheese",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Feta",
+      "type" : "Cheese",
+      "available" : true,
+      "image" : ""
+    },
+
+
+
+    {
+      "name" : "Pesto",
+      "type" : "BaseSauce",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Buffalo",
+      "type" : "BaseSauce",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "BBQ",
+      "type" : "BaseSauce",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Marinara",
+      "type" : "BaseSauce",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Ranch",
+      "type" : "BaseSauce",
+      "available" : true,
+      "image" : ""
+    },
+
+
+
+    {
+      "name" : "BBQ Dipping",
+      "type" : "DippingSauce",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Marinara Dipping",
+      "type" : "DippingSauce",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Honey Mustard Dipping",
+      "type" : "DippingSauce",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Sour Cream Dipping",
+      "type" : "DippingSauce",
+      "available" : true,
+      "image" : ""
+    },
+
+
+
+    {
+      "name" : "Bread",
+      "type" : "Special",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Chicken Fingers",
+      "type" : "Special",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Tortilla",
+      "type" : "Special",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Chips and Cheese",
+      "type" : "Special",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Chips and Salsa",
+      "type" : "Special",
+      "available" : true,
+      "image" : ""
+    },
+
+
+
+    {
+      "name" : "Vanilla Ice Cream",
+      "type" : "Dessert",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Chocolate Ice Cream",
+      "type" : "Dessert",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Twist Ice Cream",
+      "type" : "Dessert",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Cookie",
+      "type" : "Dessert",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Milkshake",
+      "type" : "Dessert",
+      "available" : true,
+      "image" : ""
+    },
+
+
+
+    {
+      "name" : "Reeses",
+      "type" : "ShakeMix-in",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "MnM",
+      "type" : "ShakeMix-in",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Oreo",
+      "type" : "ShakeMix-in",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Pecans",
+      "type" : "ShakeMix-in",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Chocolate Sauce",
+      "type" : "ShakeMix-in",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Chocolate Sprinkles",
+      "type" : "ShakeMix-in",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Chocolate Bites",
+      "type" : "ShakeMix-in",
+      "available" : true,
+      "image" : ""
+    },
+
+
+
+
+    {
+      "name" : "Chocolate Flavor",
+      "type" : "ShakeFlavor",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Strawberry Flavor",
+      "type" : "ShakeFlavor",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Pumpkin Flavor",
+      "type" : "ShakeFlavor",
+      "available" : true,
+      "image" : ""
+    },
+
+
+
+    {
+      "name" : "Strawberry Kombucha",
+      "type" : "BottledDrink",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Peace Ice Tea",
+      "type" : "BottledDrink",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Diet Pepsi",
+      "type" : "BottledDrink",
+      "available" : true,
+      "image" : ""
+    },
+
+
+
+    {
+      "name" : "Fountain Pepsi",
+      "type" : "FountainDrink",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Fountain Diet Pepsi",
+      "type" : "FountainDrink",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Fountain Mountain DewFountain Rootbeer",
+      "type" : "FountainDrink",
+      "available" : true,
+      "image" : ""
+    },
+    {
+      "name" : "Fountain Rootbeer",
+      "type" : "FountainDrink",
+      "available" : true,
+      "image" : ""
+    }
+  ]
+}

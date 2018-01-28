@@ -1,0 +1,62 @@
+{[
+  "Meat" : [
+    "Pepperoni" : {
+      "available" : true,
+      "price" : {
+        "large" : 5,
+        "small" : 3
+      },
+      "api" : "v2/food/pizza/ingredients/pepperoni",
+      "image" : ""
+    },
+    "Bacon" : {
+      "available" : true,
+      "price" : {
+        "large" : 5,
+        "small" : 3
+      },
+      "api" : "v2/food/pizza/ingredients/bacon",
+      "image" : ""
+    }
+  ],
+  "Cheese" : [
+    "Mozzarella" : {
+      "available" : true,
+      "price" : {
+        "large" : 5,
+        "small" : 3
+      },
+      "api" : "v2/food/pizza/ingredients/mozzarella",
+      "image" : ""
+    },
+    "Cheddar" : {
+      "available" : true,
+      "price" : {
+        "large" : 5,
+        "small" : 3
+      },
+      "api" : "v2/food/pizza/ingredients/cheddar",
+      "image" : ""
+    }
+  ],
+  "Vegetable" : [
+    "Mushroom" : {
+      "available" : true,
+      "price" : {
+        "large" : 5,
+        "small" : 3
+      },
+      "api" : "v2/food/pizza/ingredients/mushroom",
+      "image" : ""
+    },
+    "Bell Pepper" : {
+      "available" : true,
+      "price" : {
+        "large" : 5,
+        "small" : 3
+      },
+      "api" : "v2/food/pizza/ingredients/pepper",
+      "image" : ""
+    }
+  ]
+]}

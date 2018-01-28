@@ -1,0 +1,18 @@
+"list" : [
+  {
+    "title": "Specialty",
+    "image" : {
+      "normal" : "",
+      "monochrome" : ""
+    },
+    "api" : "v3/pizza/specialty/list"
+  },
+  {
+    "title": "Build Your Own",
+    "image" : {
+      "normal" : "",
+      "monochrome" : ""
+    },
+    "api" : "v3/pizza/build"
+  }
+]

@@ -1,0 +1,6 @@
+#/bin/bash
+curl -F 'file=1.jpg' localhost:3000/upload
+# curl -F 'file=2.jpg' localhost:3000/upload
+# curl -F 'file=3.jpg' localhost:3000/upload
+# curl -F 'file=4.jpg' localhost:3000/upload
+# curl -F 'file=5.jpg' localhost:3000/upload

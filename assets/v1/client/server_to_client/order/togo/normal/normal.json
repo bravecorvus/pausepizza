@@ -1,0 +1,28 @@
+{[
+  "Pepperoni" : {
+    "available" : true,
+    "price" : {
+      "large" : 8,
+      "small" : 6.50
+    },
+    "image" : "",
+    "ingredients" : {
+      "meats" : ["Pepperoni"],
+      "cheese" : ["Mozzarella"],
+      "toppings" : [],
+      "sauce": ["Tomato"]
+  },
+  "Cheese" : {
+    "available" : true,
+    "price" : {
+      "large" : 7,
+      "small" : 6 
+    },
+    "image" : "",
+    "ingredients" : {
+      "meats" : [],
+      "cheese" : ["Mozzarella"],
+      "toppings" : [],
+      "sauce": ["Tomato"]
+  }
+]}

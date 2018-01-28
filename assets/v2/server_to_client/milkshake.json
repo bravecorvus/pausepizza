@@ -1,0 +1,8 @@
+{
+  "price" : {
+    "large" : 3,
+    "small" : 2
+  },
+  "image" : "",
+  "flavors": ["Vanilla", "Chocoloate", "Butter Pecan", "Mint Chocolate"]
+}

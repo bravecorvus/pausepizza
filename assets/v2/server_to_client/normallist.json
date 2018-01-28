@@ -1,0 +1,11 @@
+{[
+  "Pepperoni" : {
+    "available" : true,
+    "api" : "v2/food/pizza/normal/pepperoni",
+    "image" : ""
+  },
+  "Cheese" : {
+    "available" : true,
+    "api" : "v2/food/pizza/normal/cheese",
+    "image" : ""
+]}

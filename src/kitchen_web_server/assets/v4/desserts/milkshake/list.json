@@ -1,0 +1,170 @@
+{
+	"list": [
+		{
+			"title": "Vanilla Milkshake",
+			"freeIngredients": [
+				"Milkshake"
+			],
+			"addableIngredients": [],
+			"addableIngredientTypes": [
+				"ShakeMix-in"
+			],
+			"price": [
+				{
+					"increment": "Large",
+					"price": 3
+				},
+				{
+					"increment": "Small",
+					"price": 1.5
+				}
+			],
+			"pricePerExtra": 0.25,
+			"image": {
+				"normal": "",
+				"monochrome": ""
+			},
+			"api": "v4/ingredients"
+		},
+		{
+			"title": "Chocolate Milkshake",
+			"freeIngredients": [
+				"Milkshake",
+				"Chocolate Flavor"
+			],
+			"addableIngredients": [],
+			"addableIngredientTypes": [
+				"ShakeMix-in"
+			],
+			"price": [
+				{
+					"increment": "Large",
+					"price": 3
+				},
+				{
+					"increment": "Small",
+					"price": 1.5
+				}
+			],
+			"pricePerExtra": 0.25,
+			"image": {
+				"normal": "",
+				"monochrome": ""
+			},
+			"api": "v4/ingredients"
+		},
+		{
+			"title": "Strawberry Milkshake",
+			"freeIngredients": [
+				"Milkshake",
+				"Strawberry Flavor"
+			],
+			"addableIngredients": [],
+			"addableIngredientTypes": [
+				"ShakeMix-in"
+			],
+			"price": [
+				{
+					"increment": "Large",
+					"price": 3
+				},
+				{
+					"increment": "Small",
+					"price": 1.5
+				}
+			],
+			"pricePerExtra": 0.25,
+			"image": {
+				"normal": "",
+				"monochrome": ""
+			},
+			"api": "v4/ingredients"
+		},
+		{
+			"title": "Butter Pecan Milkshake",
+			"freeIngredients": [
+				"Milkshake",
+				"Pecans",
+				"Butterscotch Flavor"
+			],
+			"addableIngredients": [],
+			"addableIngredientTypes": [
+				"ShakeMix-in"
+			],
+			"price": [
+				{
+					"increment": "Large",
+					"price": 3.5
+				},
+				{
+					"increment": "Small",
+					"price": 1.75
+				}
+			],
+			"pricePerExtra": 0.25,
+			"image": {
+				"normal": "",
+				"monochrome": ""
+			},
+			"api": "v4/ingredients"
+		},
+		{
+			"title": "Pumkpkin Milkshake",
+			"freeIngredients": [
+				"Milkshake",
+				"Pumkpkin Slices",
+				"Pumkpkin Flavor"
+			],
+			"addableIngredients": [],
+			"addableIngredientTypes": [
+				"ShakeMix-in"
+			],
+			"price": [
+				{
+					"increment": "Large",
+					"price": 3.5
+				},
+				{
+					"increment": "Small",
+					"price": 1.75
+				}
+			],
+			"pricePerExtra": 0.25,
+			"image": {
+				"normal": "",
+				"monochrome": ""
+			},
+			"api": "v4/ingredients"
+		},
+		{
+			"title": "C4 Milkshake",
+			"freeIngredients": [
+				"Milkshake",
+				"Chocolate Sauce",
+				"Chocolate Sprinkles",
+				"Chocolate Bites",
+				"Chocolate Flavor"
+			],
+			"addableIngredients": [],
+			"addableIngredientTypes": [
+				"ShakeMix-in"
+			],
+			"price": [
+				{
+					"increment": "Large",
+					"price": 3.5
+				},
+				{
+					"increment": "Small",
+					"price": 1.75
+				}
+			],
+			"pricePerExtra": 0.25,
+			"image": {
+				"normal": "",
+				"monochrome": ""
+			},
+			"api": "v4/ingredients"
+		}
+	]
+}

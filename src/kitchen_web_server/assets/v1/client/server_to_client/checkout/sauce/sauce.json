@@ -1,0 +1,12 @@
+{[
+  "Ranch" : {
+    "available" : true,
+    "image" : "", 
+    "price" : 0.25
+  },
+  "Honey Mustard" : {
+    "available" : true,
+    "image" : "", 
+    "price" : 0.25
+  }
+]}

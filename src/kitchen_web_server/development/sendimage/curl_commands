@@ -1,0 +1,1 @@
+curl -i -X POST -H "Content-Type: multipart/form-data" -F "data=@file="Olives.jpg";title=Black Olive" localhost:3000/upload

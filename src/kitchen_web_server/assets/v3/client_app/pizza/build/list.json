@@ -1,0 +1,118 @@
+"list" : {
+  "meats" : [
+    "Pepperoni" : {
+      "image" : {
+        "normal" : "",
+        "monochrome" : ""
+      },
+      "price" : {
+        "large" : 3,
+        "small" : 2
+      },
+      "available" : true
+    },
+    "Sausage" : {
+      "image" : {
+        "normal" : "",
+        "monochrome" : ""
+      },
+      "price" : {
+        "large" : 3,
+        "small" : 2
+      },
+      "available" : true
+    },
+    "Bacon" : {
+      "image" : {
+        "normal" : "",
+        "monochrome" : ""
+      },
+      "price" : {
+        "large" : 3,
+        "small" : 2
+      },
+      "available" : true
+    },
+    "Chicken" : {
+      "image" : {
+        "normal" : "",
+        "monochrome" : ""
+      },
+      "price" : {
+        "large" : 3,
+        "small" : 2
+      },
+      "available" : true
+    }
+  ],
+  "sauces" : [
+    "Ranch" : {
+      "image" : {
+        "normal" : "",
+        "monochrome" : ""
+      },
+      "price" : {
+        "large" : 3,
+        "small" : 2
+      },
+      "available" : true
+    },
+    "Ranch" : {
+      "image" : {
+        "normal" : "",
+        "monochrome" : ""
+      },
+      "price" : {
+        "large" : 3,
+        "small" : 2
+      },
+      "available" : true
+    }
+  ],
+  "toppings" : [
+    "Pepper" : {
+      "image" : {
+        "normal" : "",
+        "monochrome" : ""
+      },
+      "price" : {
+        "large" : 3,
+        "small" : 2
+      },
+      "available" : true
+    },
+    "Olives" : {
+      "image" : {
+        "normal" : "",
+        "monochrome" : ""
+      },
+      "price" : {
+        "large" : 3,
+        "small" : 2
+      },
+      "available" : true
+    },
+    "Onions" : {
+      "image" : {
+        "normal" : "",
+        "monochrome" : ""
+      },
+      "price" : {
+        "large" : 3,
+        "small" : 2
+      },
+      "available" : true
+    },
+    "Diced Tomato" : {
+      "image" : {
+        "normal" : "",
+        "monochrome" : ""
+      },
+      "price" : {
+        "large" : 3,
+        "small" : 2
+      },
+      "available" : true
+    }
+  ]
+}

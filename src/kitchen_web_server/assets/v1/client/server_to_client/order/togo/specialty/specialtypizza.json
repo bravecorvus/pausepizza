@@ -1,0 +1,30 @@
+{[
+  "Chicken Bacon Ranch" : {
+    "available" : true,
+    "price" : {
+      "large" : 11,
+      "small" : 8.50
+    },
+    "image" : "",
+    "ingredients" : {
+      "meats" : ["Chicken", "Bacon"],
+      "cheese" : ["Mozzarella"],
+      "toppings" : [],
+      "sauce": ["Ranch"]
+    }
+  },
+  "Ole Pizza" : {
+    "available" : true,
+    "price" : {
+      "large" : 12,
+      "small" : 9
+    },
+    "image" : "",
+    "ingredients" : {
+      "meats" : ["Sausage", "Pepperoni"],
+      "cheese" : ["Mozzarella"],
+      "toppings" : ["Pepper", "Mushroom"],
+      "sauce": ["Tomato"]
+    }
+  }
+]}

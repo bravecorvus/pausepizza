@@ -1,0 +1,24 @@
+{
+  "list" : [
+    {
+      "title": "Milkshake",
+      "available" : true,
+      "deliverable" : true,
+      "image" : {
+        "normal" : "files/milkshake.jpg",
+        "monochrome" : "files/milkshake.mono.jpg"
+      },
+      "api" : "v5/desserts/milkshake"
+    },
+    {
+      "title": "Ice Cream",
+      "available" : true,
+      "deliverable" : true,
+      "image" : {
+        "normal" : "files/icecream.jpg",
+        "monochrome" : "files/icecream.mono.jpg"
+      },
+      "api" : "v5/desserts/icecream"
+    }
+  ]
+}

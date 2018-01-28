@@ -1,0 +1,106 @@
+{
+  "list" : [
+    {
+      "title" : "Cheese Quesadilla",
+      "freeIngredients" : ["Mozzarella", "Tortilla"],
+      "addableIngredients" : ["Mozzarella"],
+      "addableIngredientTypes" : ["DippingSauce"],
+      "price" : [
+        {
+          "increment" : "Full",
+          "price" : 3.00
+        },
+        {
+          "increment" : "Half",
+          "price" : 1.50
+        }
+      ],
+      "pricePerExtra" : 0.25,
+      "image" : [
+        {
+          "increment" : "Full",
+          "image" : {
+            "normal" : "files/cheesyquesadillafull.jpg",
+            "monochrome" : "files/cheesyquesadillafull.mono.jpg"
+          }
+        },
+        {
+          "increment" : "Half",
+          "image" : {
+            "normal" : "files/cheesyquesadillahalf.jpg",
+            "monochrome" : "files/cheesyquesadillahalf.mono.jpg"
+          }
+        }
+      ],
+      "api" : "v5/ingredients"
+    },
+    {
+      "title" : "Chicken Quesadilla",
+      "freeIngredients" : ["Mozzarella", "Tortilla", "Chicken"],
+      "addableIngredients" : ["Mozzarella", "Chicken"],
+      "addableIngredientTypes" : ["DippingSauce"],
+      "price" : [
+        {
+          "increment" : "Full",
+          "price" : 4.00
+        },
+        {
+          "increment" : "Small",
+          "price" : 2.00
+        }
+      ],
+      "pricePerExtra" : 0.25,
+      "image" : [
+        {
+          "increment" : "Full",
+          "image" : {
+            "normal" : "files/chickenquesadillafull.jpg",
+            "monochrome" : "files/chickenquesadillafull.mono.jpg"
+          }
+        },
+        {
+          "increment" : "Half",
+          "image" : {
+            "normal" : "files/chickenquesadillahalf.jpg",
+            "monochrome" : "files/chickenquesadillahalf.mono.jpg"
+          }
+        }
+      ],
+      "api" : "v5/ingredients"
+    },
+    {
+      "title" : "Ultimate with Chicken Quesadilla",
+      "freeIngredients" : ["Mozzarella", "Tortilla", "Chicken", "Jalapenos", "Onions", "Tomatoes"],
+      "addableIngredients" : ["Mozzarella", "Chicken", "Jalapenos", "Onions", "Tomatoes"],
+      "addableIngredientTypes" : ["DippingSauce"],
+      "price" : [
+        {
+          "increment" : "Full",
+          "price" : 4.50
+        },
+        {
+          "increment" : "Small",
+          "price" : 2.50
+        }
+      ],
+      "pricePerExtra" : 0.25,
+      "image" : [
+        {
+          "increment" : "Full",
+          "image" : {
+            "normal" : "files/ultimatewithchickenquesadillafull.jpg",
+            "monochrome" : "files/ultimatewithchickenquesadillafull.mono.jpg"
+          }
+        },
+        {
+          "increment" : "Half",
+          "image" : {
+            "normal" : "files/ultimatewithchickenquesadillahalf.jpg",
+            "monochrome" : "files/ultimatewithchickenquesadillahalf.mono.jpg"
+          }
+        }
+      ],
+      "api" : "v5/ingredients"
+    }
+  ]
+}

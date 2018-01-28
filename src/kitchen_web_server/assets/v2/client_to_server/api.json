@@ -1,0 +1,25 @@
+{
+  "ORDER": [
+    {
+    "ITEM": "Chicken Bacon Ranch",
+    "TYPE": "Pizza",
+    "SIZE": "Large",
+    "MOD": ["No ranch", "thin crust"],
+    "ADD": ["Mushroom"],
+    "PRICE": 14
+    },
+    {
+    "ITEM": "Side of Ranch",
+    "TYPE": "Side",
+    "SIZE": "",
+    "MOD": [],
+    "ADD": [],
+    "PRICE": 0.25
+    }
+  ],
+  "DELIVERY" : {
+    "LOCATION" : "THORSON",
+    "NAME" : "John",
+    "PHONE" : "1113334444"
+  }
+}

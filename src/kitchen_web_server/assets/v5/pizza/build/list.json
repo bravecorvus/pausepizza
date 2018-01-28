@@ -1,0 +1,77 @@
+{
+  "list" : [
+    {
+      "title" : "Build Your Own Pizza",
+      "freeIngredients" : ["Dough", "BaseSauce", "Cheese"],
+      "addableIngredients" : [],
+      "addableIngredientTypes" : ["Cheese", "BaseSauce", "Meat", "Veggie"],
+      "price" : [
+        {
+          "increment" : "Large",
+          "price" : 9.00
+        },
+        {
+          "increment" : "Small",
+          "price" : 6.00
+        },
+        {
+          "increment" : "Bagel",
+          "price" : 3.00
+        },
+        {
+          "increment" : "Pita",
+          "price" : 2.50
+        }
+      ],
+      "pricePerExtra" : [
+        {
+          "increment" : "Large",
+          "pricePerExtra" : 1.00
+        },
+        {
+          "increment" : "Small",
+          "pricePerExtra" : 0.75
+        },
+        {
+          "increment" : "Bagel",
+          "pricePerExtra" : 0.75
+        },
+        {
+          "increment" : "Pita",
+          "pricePerExtra" : 0.75
+        }
+      ],
+      "image" : [
+        {
+          "increment" : "Large",
+          "image" : {
+            "normal" : "files/buildpizzalarge.jpg",
+            "monochrome" : "files/buildpizzalarge.mono.jpg"
+          }
+        },
+        {
+          "increment" : "Small",
+          "image" : {
+            "normal" : "files/buildpizzasmall.jpg",
+            "monochrome" : "files/buildpizzasmall.mono.jpg"
+          }
+        },
+        {
+          "increment" : "Bagel",
+          "image" : {
+            "normal" : "files/buildpizzabagel.jpg",
+            "monochrome" : "files/buildpizzabagel.mono.jpg"
+          }
+        },
+        {
+          "increment" : "Pita",
+          "image" : {
+            "normal" : "files/buildpizzapita.jpg",
+            "monochrome" : "files/buildpizzapita.mono.jpg"
+          }
+        }
+      ],
+      "api" : "v5/ingredients"
+    }
+  ]
+}

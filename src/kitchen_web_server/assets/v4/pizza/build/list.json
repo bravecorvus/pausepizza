@@ -1,0 +1,59 @@
+{
+	"list": [
+		{
+			"title": "Build Your Own Pizza",
+			"freeIngredients": [
+				"Dough",
+				"BaseSauce",
+				"Cheese"
+			],
+			"addableIngredients": [],
+			"addableIngredientTypes": [
+				"Cheese",
+				"BaseSauce",
+				"Meat",
+				"Veggie"
+			],
+			"price": [
+				{
+					"increment": "Large",
+					"price": 9
+				},
+				{
+					"increment": "Small",
+					"price": 6
+				},
+				{
+					"increment": "Bagel",
+					"price": 3
+				},
+				{
+					"increment": "Pita",
+					"price": 2.5
+				}
+			],
+			"pricePerExtra": [
+				{
+					"increment": "Large",
+					"price": 0
+				},
+				{
+					"increment": "Small",
+					"price": 0
+				},
+				{
+					"increment": "Bagel",
+					"price": 0
+				},
+				{
+					"increment": "Pita",
+					"price": 0
+				}
+			],
+			"image": {
+				"normal": "",
+				"monochrome": ""
+			}
+		}
+	]
+}

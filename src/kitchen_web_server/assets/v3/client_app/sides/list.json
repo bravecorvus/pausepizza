@@ -1,0 +1,22 @@
+"list" : [
+  {
+    "title": "Chips and Salsa",
+    "available" : true,
+    "deliverable" : true,
+    "image" : {
+      "normal" : "",
+      "monochrome" : ""
+    },
+    "api" : "v3/sides/chipsandsalsa"
+  },
+  {
+    "title": "Nachoes",
+    "available" : true,
+    "deliverable" : true,
+    "image" : {
+      "normal" : "",
+      "monochrome" : ""
+    },
+    "api" : "v3/sides/nachos"
+  }
+]

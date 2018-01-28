@@ -1,0 +1,6 @@
+{
+  "type" : "Pizza",
+  "name" : "Chicken Bacon Ranch",
+  "modtype" : "imagechange",
+  "mod" : "image=abc.jpg"
+}

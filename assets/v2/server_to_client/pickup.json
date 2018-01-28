@@ -1,0 +1,48 @@
+{
+  "OvenOpen" : {
+    "Food" : [
+      "Pizza" :{
+        "available" : true,
+        "image" : "",
+        "api" : "v2/food/pizza/list"
+      },
+      "Quesadilla" :{
+        "available" : true,
+        "image" : "",
+        "api" : "v2/food/quesadilla"
+      },
+      "Cheesy Bread" :{
+        "available" : false,
+        "image" : "",
+        "api" : "v2/food/cheesybread"
+      }
+    ],
+    "Dessert" : [
+      "Milkshake" :{
+        "available" : true,
+        "image" : "",
+        "api" : "v2/dessert/milkshake"
+      },
+      "Ice Cream" :{
+        "available" : true,
+        "image" : "",
+        "api" : "v2/dessert/icecream"
+      }
+    ]
+  },
+
+  "OvenClosed" : {
+    "Dessert" : [
+      "Milkshake" :{
+        "available" : true,
+        "image" : "",
+        "api" : "v2/dessert/milkshake"
+      },
+      "Ice Cream" :{
+        "available" : true,
+        "image" : "",
+        "link" : "v2/dessert/icecream"
+      }
+    ]
+  }
+}

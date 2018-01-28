@@ -1,0 +1,9 @@
+{
+  "type" : "Pizza",
+  "name" : "Chicken Bacon Ranch",
+  "modtype" : "pricechange",
+  "mod" : {
+    "large" : 12,
+    "small" : 8.5
+  }
+}

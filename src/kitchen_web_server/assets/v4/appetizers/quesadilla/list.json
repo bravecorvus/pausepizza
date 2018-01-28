@@ -1,0 +1,101 @@
+{
+	"list": [
+		{
+			"title": "Cheese Quesadilla",
+			"freeIngredients": [
+				"Mozzarella",
+				"Tortilla"
+			],
+			"addableIngredients": [
+				"Mozzarella"
+			],
+			"addableIngredientTypes": [
+				"DippingSauce"
+			],
+			"price": [
+				{
+					"increment": "Large",
+					"price": 3
+				},
+				{
+					"increment": "Small",
+					"price": 1.5
+				}
+			],
+			"pricePerExtra": 0.25,
+			"image": {
+				"normal": "",
+				"monochrome": ""
+			},
+			"api": "v4/ingredients"
+		},
+		{
+			"title": "Chicken Quesadilla",
+			"freeIngredients": [
+				"Mozzarella",
+				"Tortilla",
+				"Chicken"
+			],
+			"addableIngredients": [
+				"Mozzarella",
+				"Chicken"
+			],
+			"addableIngredientTypes": [
+				"DippingSauce"
+			],
+			"price": [
+				{
+					"increment": "Large",
+					"price": 4
+				},
+				{
+					"increment": "Small",
+					"price": 2
+				}
+			],
+			"pricePerExtra": 0.25,
+			"image": {
+				"normal": "",
+				"monochrome": ""
+			},
+			"api": "v4/ingredients"
+		},
+		{
+			"title": "Ultimate with Chicken Quesadilla",
+			"freeIngredients": [
+				"Mozzarella",
+				"Tortilla",
+				"Chicken",
+				"Jalapenos",
+				"Onions",
+				"Tomatoes"
+			],
+			"addableIngredients": [
+				"Mozzarella",
+				"Chicken",
+				"Jalapenos",
+				"Onions",
+				"Tomatoes"
+			],
+			"addableIngredientTypes": [
+				"DippingSauce"
+			],
+			"price": [
+				{
+					"increment": "Large",
+					"price": 4.5
+				},
+				{
+					"increment": "Small",
+					"price": 2.5
+				}
+			],
+			"pricePerExtra": 0.25,
+			"image": {
+				"normal": "",
+				"monochrome": ""
+			},
+			"api": "v4/ingredients"
+		}
+	]
+}

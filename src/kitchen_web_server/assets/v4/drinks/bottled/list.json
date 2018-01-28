@@ -1,0 +1,46 @@
+{
+	"list": [
+		{
+			"title": "Strawberry Kombucha",
+			"freeIngredients": [
+				"Strawberry Kombucha"
+			],
+			"addableIngredients": [],
+			"price": 3,
+			"pricePerExtra": 0,
+			"image": {
+				"normal": "",
+				"monochrome": ""
+			},
+			"api": "v4/checkout"
+		},
+		{
+			"title": "Peace Ice Tea",
+			"freeIngredients": [
+				"Peace Ice Tea"
+			],
+			"addableIngredients": [],
+			"price": 3,
+			"pricePerExtra": 0,
+			"image": {
+				"normal": "",
+				"monochrome": ""
+			},
+			"api": "v4/checkout"
+		},
+		{
+			"title": "Diet Pepsi",
+			"freeIngredients": [
+				"Diet Pepsi"
+			],
+			"addableIngredients": [],
+			"price": 1.5,
+			"pricePerExtra": 0,
+			"image": {
+				"normal": "",
+				"monochrome": ""
+			},
+			"api": "v4/checkout"
+		}
+	]
+}

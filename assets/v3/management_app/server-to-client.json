@@ -1,0 +1,340 @@
+"list" : {
+
+
+  "Pizza" : {
+    "Meats" :  [
+
+      {
+        "name" : "Chicken",
+        "priceDifference" : true,
+        "price" : [
+          {
+            "increment" : "large",
+            "price" : 5
+          },
+          {
+            "increment" : "small",
+            "price" : 3
+          }
+        ],
+        "image" : ""
+      },
+
+      {
+        "name" : "Bacon",
+        "priceDifference" : true,
+        "price" : [
+          {
+            "increment" : "large",
+            "price" : 5
+          },
+          {
+            "increment" : "small",
+            "price" : 3
+          }
+        ],
+        "image" : ""
+      },
+
+      {
+        "name" : "Meatball",
+        "priceDifference" : true,
+        "price" : [
+          {
+            "increment" : "large",
+            "price" : 5
+          },
+          {
+            "increment" : "small",
+            "price" : 3
+          }
+        ],
+        "image" : ""
+      }
+    ], "Cheese" :  [
+
+      {
+        "name" : "Mozzarella",
+        "priceDifference" : true,
+        "price" : [
+          {
+            "increment" : "large",
+            "price" : 5
+          },
+          {
+            "increment" : "small",
+            "price" : 3
+          }
+        ],
+        "image" : ""
+      },
+
+      {
+        "name" : "Fetta",
+        "priceDifference" : true,
+        "price" : [
+          {
+            "increment" : "large",
+            "price" : 5
+          },
+          {
+            "increment" : "small",
+            "price" : 3
+          }
+        ],
+        "image" : ""
+      }
+
+    ], "Toppings" :  [
+
+      {
+        "name" : "Pepper",
+        "priceDifference" : true,
+        "price" : [
+          {
+            "increment" : "large",
+            "price" : 5
+          },
+          {
+            "increment" : "small",
+            "price" : 3
+          }
+        ],
+        "image" : ""
+      },
+      {
+        "name" : "Mushroom",
+        "priceDifference" : true,
+        "price" : [
+          {
+            "increment" : "large",
+            "price" : 5
+          },
+          {
+            "increment" : "small",
+            "price" : 3
+          }
+        ],
+        "image" : ""
+      },
+      {
+        "name" : "Onion",
+        "priceDifference" : true,
+        "price" : [
+          {
+            "increment" : "large",
+            "price" : 5
+          },
+          {
+            "increment" : "small",
+            "price" : 3
+          }
+        ],
+        "image" : ""
+      }
+    
+    ],
+
+    "Sauces" :  [
+
+      {
+        "name" : "Ranch",
+        "priceDifference" : false,
+        "price" : 0.25,
+        "image" : ""
+      },
+
+      {
+        "name" : "Honey Mustard",
+        "priceDifference" : false,
+        "price" : 0.25,
+        "image" : ""
+      },
+
+      {
+        "name" : "Salsa",
+        "priceDifference" : false,
+        "price" : 0.25,
+        "image" : ""
+      }
+       
+    ]
+
+  },
+
+
+  "Desserts" : [
+
+      {
+        "name" : "Milkshake",
+        "types" : [
+
+          {
+            "name" : "Butter Pecan",
+            "image" : "",
+            "priceDifference" : true,
+            "price" : [
+              {
+                "increment" : "Large",
+                "price" : 3.50
+              },
+              {
+                "increment" : "Small",
+                "price" : 1.75
+              }
+            ]
+          },
+
+          {
+            "name" : "Vanilla",
+            "image" : "",
+            "priceDifference" : true,
+            "price" : [
+              {
+                "increment" : "Large",
+                "price" : 3
+              },
+              {
+                "increment" : "Small",
+                "price" : 1.5
+              }
+            ]
+          }
+
+        ]
+
+      },
+
+      {
+        "name" : "Ice Cream",
+        "priceDifference" : false,
+        "price" : 0.25,
+        "types" : [
+          {
+            "name" : "Vanilla",
+            "image" : ""
+          },
+          {
+            "name" : "Chocolate",
+            "image" : ""
+          }
+        ]
+      },
+
+      {
+        "name" : "Cookie",
+        "priceDifference" : false,
+        "price" : 0.50,
+        "image" : ""
+      }
+
+  ],
+
+
+  "Appetizers" : [
+
+    {
+      "name" : "Cheese Quesadilla",
+      "priceDifference" : true,
+      "price" : [
+        {
+          "increment" : "Full",
+          "price" : 3
+        },
+        {
+          "increment" : "Half",
+          "price" : 1.5
+        }
+      ],
+      "image" : ""
+    },
+
+    {
+      "name" : "Chicken Quesadilla",
+      "priceDifference" : true,
+      "price" : [
+        {
+          "increment" : "Full",
+          "price" : 4
+        },
+        {
+          "increment" : "Half",
+          "price" : 2
+        }
+      ],
+      "image" : ""
+    },
+
+    {
+      "name" : "Ultimate  Quesadilla",
+      "priceDifference" : true,
+      "price" : [
+        {
+          "increment" : "Full",
+          "price" : 4
+        },
+        {
+          "increment" : "Half",
+          "price" : 2
+        }
+      ],
+      "image" : ""
+    },
+
+    {
+        "name" : "Chicken Fingers",
+        "priceDifference" : true,
+        "price" : [
+          {
+            "increment" : "8 Piece",
+            "price" : 4
+          },
+          {
+            "increment" : "4 Piece",
+            "price" : 2
+          }
+        ],
+        "image" : ""
+    }
+  ],
+
+
+  "Drinks" : [
+
+    {
+      "name" : "Fountain Drink",
+      "priceDifference" : false,
+      "price" : 1.5,
+      "image" : ""
+    },
+
+    {
+      "name" : "Arizona",
+      "priceDifference" : false,
+      "price" : 2,
+      "image" : ""
+    },
+
+    {
+      "name" : "Gatorade",
+      "priceDifference" : false,
+      "price" : 1.5,
+      "image" : ""
+    }
+
+  ],
+
+
+  "Sides" : [
+
+    {
+      "name" : "Nacho Supreme",
+      "priceDifference" : false,
+      "price" : 3,
+      "image" : ""
+    }
+
+  ]
+
+
+}

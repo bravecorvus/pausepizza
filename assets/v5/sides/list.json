@@ -1,0 +1,24 @@
+{
+  "list" : [
+    {
+      "title": "Chips and Sauce",
+      "available" : true,
+      "deliverable" : true,
+      "image" : {
+        "normal" : "files/chipsandsauce.jpg",
+        "monochrome" : "files/chipsandsauce.mono.jpg"
+      },
+      "api" : "v5/sides/chips"
+    },
+    {
+      "title": "Dipping Sauce",
+      "available" : true,
+      "deliverable" : true,
+      "image" : {
+        "normal" : "files/dippingsauce.jpg",
+        "monochrome" : "files/dippingsauce.mono.jpg"
+      },
+      "api" : "v5/sides/sauce"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+"list" : {
+  "image" : {
+    "normal" : "",
+    "monochrome" : ""
+  },
+  "ingredients" : {
+    "meats" : ["Sausage"],
+    "sauces" : ["Red"],
+    "toppings" : ["Olives", "Pepper"]
+  },
+	"api" : "v3/pizza/build"
+}

@@ -1,0 +1,64 @@
+{
+	"list": [
+		{
+			"title": "BBQ",
+			"freeIngredients": [
+				"BBQ Dipping"
+			],
+			"addableIngredients": [],
+			"addableIngredientTypes": [],
+			"price": 1,
+			"pricePerExtra": 0,
+			"image": {
+				"normal": "",
+				"monochrome": ""
+			},
+			"api": "v4/checkout"
+		},
+		{
+			"title": "Marinara",
+			"freeIngredients": [
+				"Marinara Dipping"
+			],
+			"addableIngredients": [],
+			"addableIngredientTypes": [],
+			"price": 1,
+			"pricePerExtra": 0,
+			"image": {
+				"normal": "",
+				"monochrome": ""
+			},
+			"api": "v4/checkout"
+		},
+		{
+			"title": "Honey Mustard",
+			"freeIngredients": [
+				"Honey Mustard Dipping"
+			],
+			"addableIngredients": [],
+			"addableIngredientTypes": [],
+			"price": 1,
+			"pricePerExtra": 0,
+			"image": {
+				"normal": "",
+				"monochrome": ""
+			},
+			"api": "v4/checkout"
+		},
+		{
+			"title": "Sour Cream",
+			"freeIngredients": [
+				"Sour Cream Dipping"
+			],
+			"addableIngredients": [],
+			"addableIngredientTypes": [],
+			"price": 1,
+			"pricePerExtra": 0,
+			"image": {
+				"normal": "",
+				"monochrome": ""
+			},
+			"api": "v4/checkout"
+		}
+	]
+}

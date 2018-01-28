@@ -1,0 +1,13 @@
+{
+  "price" : {
+    "Large" : 11,
+    "Small" : 8.50
+  },
+  "image" : "",
+  "ingredients" : {
+    "Meats" : ["Chicken", "Bacon"],
+    "Cheese" : ["Mozzarella"],
+    "Vegetables" : [],
+    "Sauce": ["Ranch"]
+  }
+}

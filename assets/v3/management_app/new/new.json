@@ -1,0 +1,17 @@
+{
+  "type" : "Pizza",
+  "category" : "Specialty",
+  "name" : "Cow Diarrhea",
+  "image" : "",
+  "priceDifference" : true,
+  "price" : [
+    {
+      "increment" : "Large",
+      "price" : 11
+    },
+    {
+      "increment" : "Small",
+      "price" : 8
+    }
+  ]
+}

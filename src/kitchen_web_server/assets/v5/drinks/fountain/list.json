@@ -1,0 +1,59 @@
+{
+  "list" : [
+    {
+      "title" : "Pepsi",
+      "freeIngredients" : ["Fountain Pepsi"],
+      "addableIngredients" : [],
+      "addableIngredientTypes" : [],
+      "price" : 1.50,
+      "pricePerExtra" : 0.00,
+      "image" : {
+        "normal" : "files/fountainpepsi.jpg",
+        "monochrome" : "files/fountainpepsi.mono.jpg"
+      },
+      "api" : "v5/checkout"
+    },
+
+    {
+      "title" : "Diet Pepsi",
+      "freeIngredients" : ["Fountain Diet Pepsi"],
+      "addableIngredients" : [],
+      "addableIngredientTypes" : [],
+      "price" : 1.50,
+      "pricePerExtra" : 0.00,
+      "image" : {
+        "normal" : "files/fountaindietpepsi.jpg",
+        "monochrome" : "files/fountaindietpepsi.mono.jpg"
+      },
+      "api" : "v5/checkout"
+    },
+
+    {
+      "title" : "Mountain Dew",
+      "freeIngredients" : ["Fountain Mountain Dew"],
+      "addableIngredients" : [],
+      "addableIngredientTypes" : [],
+      "price" : 1.50,
+      "pricePerExtra" : 0.00,
+      "image" : {
+        "normal" : "files/fountainmountaindew.jpg",
+        "monochrome" : "files/fountainmountaindew.mono.jpg"
+      },
+      "api" : "v5/checkout"
+    },
+
+    {
+      "title" : "Rootbeer",
+      "freeIngredients" : ["Fountain Rootbeer"],
+      "addableIngredients" : [],
+      "addableIngredientTypes" : [],
+      "price" : 1.50,
+      "pricePerExtra" : 0.00,
+      "image" : {
+        "normal" : "files/fountainrootbeer.jpg",
+        "monochrome" : "files/fountainrootbeer.mono.jpg"
+      },
+      "api" : "v5/checkout"
+    }
+  ]
+}

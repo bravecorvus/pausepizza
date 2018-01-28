@@ -1,0 +1,7 @@
+#!/bin/bash
+cd src/customer_web_server
+go build
+mv customer_web_server ../../
+cd ../kitchen_web_server
+go build
+mv kitchen_web_server ../../

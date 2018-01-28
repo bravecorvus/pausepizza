@@ -1,0 +1,22 @@
+{
+	"list": [
+		{
+			"title": "Build Your Own Pizza",
+			"available": true,
+			"deliverable": true,
+			"image": {
+				"normal": "",
+				"monochrome": ""
+			}
+		},
+		{
+			"title": "Specialty Pizza",
+			"available": true,
+			"deliverable": true,
+			"image": {
+				"normal": "",
+				"monochrome": ""
+			}
+		}
+	]
+}

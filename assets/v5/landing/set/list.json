@@ -1,0 +1,136 @@
+{
+	"list": [
+		{
+			"parameter": "kitchenOpen",
+			"times": {
+				"Sunday": {
+					"open": "1:00AM",
+					"close": "3:00AM"
+				},
+				"Monday": {
+					"open": "2:00AM",
+					"close": "3:00AM"
+				},
+				"Tuesday": {
+					"open": "2:00AM",
+					"close": "3:00AM"
+				},
+				"Wednesday": {
+					"open": "1:00AM",
+					"close": "3:AMPM"
+				},
+				"Thursday": {
+					"open": "8:00AM",
+					"close": "9:00AM"
+				},
+				"Friday": {
+					"open": "8:00AM",
+					"close": "9:00AM"
+				},
+				"Saturday": {
+					"open": "8:00AM",
+					"close": "9:00AM"
+				}
+			}
+		},
+		{
+			"parameter": "deliveryAvailable",
+			"times": {
+				"Sunday": {
+					"open": "8:00AM",
+					"close": "9:00AM"
+				},
+				"Monday": {
+					"open": "8:00AM",
+					"close": "9:00AM"
+				},
+				"Tuesday": {
+					"open": "8:00AM",
+					"close": "9:00AM"
+				},
+				"Wednesday": {
+					"open": "1:00AM",
+					"close": "9:00PM"
+				},
+				"Thursday": {
+					"open": "8:00AM",
+					"close": "9:00AM"
+				},
+				"Friday": {
+					"open": "8:00AM",
+					"close": "9:00AM"
+				},
+				"Saturday": {
+					"open": "8:00AM",
+					"close": "9:00AM"
+				}
+			}
+		},
+		{
+			"parameter": "ovenOn",
+			"times": {
+				"Sunday": {
+					"open": "8:00AM",
+					"close": "9:00AM"
+				},
+				"Monday": {
+					"open": "8:00AM",
+					"close": "9:00AM"
+				},
+				"Tuesday": {
+					"open": "8:00AM",
+					"close": "9:00AM"
+				},
+				"Wednesday": {
+					"open": "8:00AM",
+					"close": "9:00PM"
+				},
+				"Thursday": {
+					"open": "8:00AM",
+					"close": "9:00AM"
+				},
+				"Friday": {
+					"open": "8:00AM",
+					"close": "9:00AM"
+				},
+				"Saturday": {
+					"open": "8:00AM",
+					"close": "9:00AM"
+				}
+			}
+		},
+		{
+			"parameter": "lateMenu",
+			"times": {
+				"Sunday": {
+					"open": "8:00AM",
+					"close": "9:00AM"
+				},
+				"Monday": {
+					"open": "8:00AM",
+					"close": "9:00AM"
+				},
+				"Tuesday": {
+					"open": "8:00AM",
+					"close": "9:00AM"
+				},
+				"Wednesday": {
+					"open": "8:00AM",
+					"close": "9:00AM"
+				},
+				"Thursday": {
+					"open": "8:00AM",
+					"close": "9:00AM"
+				},
+				"Friday": {
+					"open": "8:00AM",
+					"close": "9:00AM"
+				},
+				"Saturday": {
+					"open": "8:00AM",
+					"close": "9:00AM"
+				}
+			}
+		}
+	]
+}

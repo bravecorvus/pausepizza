@@ -1,0 +1,28 @@
+{
+	"list": [
+		{
+			"title": "Cookie",
+			"freeIngredients": [
+				"Cookie"
+			],
+			"addableIngredients": [],
+			"addableIngredientTypes": [],
+			"price": [
+				{
+					"increment": "One Cookie",
+					"price": 1
+				},
+				{
+					"increment": "Two Cookies",
+					"price": 1.75
+				}
+			],
+			"pricePerExtra": 0,
+			"image": {
+				"normal": "",
+				"monochrome": ""
+			},
+			"api": "v4/checkout"
+		}
+	]
+}

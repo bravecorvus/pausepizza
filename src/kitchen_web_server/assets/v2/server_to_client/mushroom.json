@@ -1,0 +1,8 @@
+{
+  "available" : true,
+  "price" : {
+    "large" : 3,
+    "small" : 2
+  },
+  "image" : ""
+}

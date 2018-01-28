@@ -1,0 +1,22 @@
+"list" : [
+  {
+    "title": "Fountain",
+    "available" : true,
+    "deliverable" : true,
+    "image" : {
+      "normal" : "",
+      "monochrome" : ""
+    },
+    "price" : 1
+  },
+  {
+    "title": "Pepsi",
+    "available" : true,
+    "deliverable" : true,
+    "image" : {
+      "normal" : "",
+      "monochrome" : ""
+    },
+    "price" : 1.5
+  }
+]

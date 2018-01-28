@@ -1,0 +1,16 @@
+{
+  "type" : "Appetizer",
+  "name" : "Blood Orgy",
+  "image" : "",
+  "priceDifference" : true,
+  "price" : [
+    {
+      "increment" : "Large",
+      "price" : 6
+    },
+    {
+      "increment" : "Small",
+      "price" : 5
+    }
+  ]
+}

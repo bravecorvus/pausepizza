@@ -1,0 +1,38 @@
+{
+  "list" : [
+    {
+      "title" : "Cookie",
+      "freeIngredients" : ["Cookie"],
+      "addableIngredients" : [],
+      "addableIngredientTypes" : [],
+      "price" : [
+        {
+          "increment" : "One Cookie",
+          "price" : 1
+        },
+        {
+          "increment" : "Two Cookie",
+          "price" : 1.75
+        }
+      ],
+      "pricePerExtra" : 0.00,
+      "image" : [
+        {
+          "increment" : "One Cookie",
+          "image" : {
+            "normal" : "files/onecookie.jpg",
+            "monochrome" : "files/onecookie.mono.jpg"
+          }
+        },
+        {
+          "increment" : "Two Cookies",
+          "image" : {
+            "normal" : "files/twocookies.jpg",
+            "monochrome" : "files/twocookies.mono.jpg"
+          }
+        }
+      ],
+      "api" : "v5/checkout"
+    }
+  ]
+}

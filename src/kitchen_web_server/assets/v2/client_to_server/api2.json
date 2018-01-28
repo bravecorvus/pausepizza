@@ -1,0 +1,17 @@
+{
+  "ORDER": [
+    {
+    "ITEM": "Milkshake",
+    "TYPE": "Dessert",
+    "SIZE": "Large",
+    "MOD": [],
+    "ADD": [],
+    "PRICE": 5
+    }
+  ],
+  "DELIVERY" : {
+    "LOCATION" : "Pickup",
+    "NAME" : "",
+    "PHONE" : ""
+  }
+}
