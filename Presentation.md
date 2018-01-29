@@ -77,9 +77,9 @@ Implement websockets on Kitchen side
 1. Websocket connection established the first time user logs in
 2. Every user on the Kitchen App will be notified anytime a new order is POSTED from the Client ordering app.
 
-## Image Processing
+## Kitchen Management Stuff
 
-
+### Image Processing
 
 The server will take a valid JPEG or PNG and then convert it to a 500x500px JPEG (as well as create a monochromatic version of it)
 
@@ -99,10 +99,19 @@ This will work.
 curl -F 'file=@pizza.JPEG'  localhost:7000/v5/8Dk6b5yndkjItF4RoeDhcz6ESFtHVTMA2jSNyL6Z/pizza/specialty/Chicken_Bacon_Ranch_Pizza.Large
 ```
 
-## Documentation
+### Documentation
 [godoc](https://godoc.org/github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server)
 
-## Tests
+### Superadmin
+The superadmin account is an admin account on the kitchen management server that cannot be deleted (which will be a fail safe for if a user+pass system becomes compromised).
+
+It is reset every day at midnight, and the combination is sent to people on a mailing list (Airmail).
+
+### Tests
 go test ./pizza
 
-## All Post endpoints complete on server side
+### All Post endpoints complete on server side
+
+## TODO
+- Statically compiled Docker scratch images
+- Implement SSL to make the API more secure
