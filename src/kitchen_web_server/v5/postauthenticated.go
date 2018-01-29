@@ -3,7 +3,6 @@ package v5
 import (
 	"encoding/json"
 	"fmt"
-	"log"
 	"net/http"
 
 	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/appetizers"
@@ -111,7 +110,7 @@ func (obj *ObjectStore) postAuthenticatedPostAPI(w http.ResponseWriter, r *http.
 			err := decoder.Decode(&l)
 			if err != nil {
 				json.NewEncoder(w).Encode(response.Response{Status: false, Message: "landing page JSON API invalid"})
-				log.Fatal(err)
+				fmt.Println(err.Error())
 
 			}
 			defer r.Body.Close()
@@ -124,7 +123,7 @@ func (obj *ObjectStore) postAuthenticatedPostAPI(w http.ResponseWriter, r *http.
 			err := decoder.Decode(&s)
 			if err != nil {
 				json.NewEncoder(w).Encode(response.Response{Status: false, Message: "landing/set page JSON API invalid"})
-				log.Fatal(err)
+				fmt.Println(err.Error())
 			}
 			defer r.Body.Close()
 			obj.Times.Update(&s)
@@ -153,7 +152,7 @@ func (obj *ObjectStore) postAuthenticatedPostAPI(w http.ResponseWriter, r *http.
 			err := decoder.Decode(&i)
 			if err != nil {
 				json.NewEncoder(w).Encode(response.Response{Status: false, Message: "ingredients page JSON API invalid"})
-				log.Fatal(err)
+				fmt.Println(err.Error())
 			}
 			defer r.Body.Close()
 			obj.Ingredients_List.Update(&i)
@@ -178,7 +177,7 @@ func (obj *ObjectStore) postAuthenticatedPostAPI(w http.ResponseWriter, r *http.
 			err := decoder.Decode(&p)
 			if err != nil {
 				json.NewEncoder(w).Encode(response.Response{Status: false, Message: "pizza page JSON API invalid"})
-				log.Fatal(err)
+				fmt.Println(err.Error())
 			}
 			defer r.Body.Close()
 			obj.Pizza_List.Update(&p)
@@ -190,7 +189,7 @@ func (obj *ObjectStore) postAuthenticatedPostAPI(w http.ResponseWriter, r *http.
 				err := decoder.Decode(&p)
 				if err != nil {
 					json.NewEncoder(w).Encode(response.Response{Status: false, Message: "pizza/specialty page JSON API invalid"})
-					log.Fatal(err)
+					fmt.Println(err.Error())
 				}
 				defer r.Body.Close()
 				obj.Pizza_Specialty_List.Update(&p)
@@ -218,7 +217,7 @@ func (obj *ObjectStore) postAuthenticatedPostAPI(w http.ResponseWriter, r *http.
 				err := decoder.Decode(&p)
 				if err != nil {
 					json.NewEncoder(w).Encode(response.Response{Status: false, Message: "pizza/build page JSON API invalid"})
-					log.Fatal(err)
+					fmt.Println(err.Error())
 				}
 				defer r.Body.Close()
 				obj.Pizza_Build_List.Update(&p)
@@ -259,7 +258,7 @@ func (obj *ObjectStore) postAuthenticatedPostAPI(w http.ResponseWriter, r *http.
 			err := decoder.Decode(&d)
 			if err != nil {
 				json.NewEncoder(w).Encode(response.Response{Status: false, Message: "desserts page JSON API invalid"})
-				log.Fatal(err)
+				fmt.Println(err.Error())
 			}
 			defer r.Body.Close()
 			obj.Desserts_List.Update(&d)
@@ -272,7 +271,7 @@ func (obj *ObjectStore) postAuthenticatedPostAPI(w http.ResponseWriter, r *http.
 				err := decoder.Decode(&d)
 				if err != nil {
 					json.NewEncoder(w).Encode(response.Response{Status: false, Message: "desserts/cookie page JSON API invalid"})
-					log.Fatal(err)
+					fmt.Println(err.Error())
 				}
 				defer r.Body.Close()
 				obj.Cookie_List.Update(&d)
@@ -298,7 +297,7 @@ func (obj *ObjectStore) postAuthenticatedPostAPI(w http.ResponseWriter, r *http.
 				err := decoder.Decode(&d)
 				if err != nil {
 					json.NewEncoder(w).Encode(response.Response{Status: false, Message: "desserts/icecream page JSON API invalid"})
-					log.Fatal(err)
+					fmt.Println(err.Error())
 				}
 				defer r.Body.Close()
 				obj.Icecream_List.Update(&d)
@@ -324,7 +323,7 @@ func (obj *ObjectStore) postAuthenticatedPostAPI(w http.ResponseWriter, r *http.
 				err := decoder.Decode(&d)
 				if err != nil {
 					json.NewEncoder(w).Encode(response.Response{Status: false, Message: "desserts/milkshake page JSON API invalid"})
-					log.Fatal(err)
+					fmt.Println(err.Error())
 				}
 				defer r.Body.Close()
 				obj.Milkshake_List.Update(&d)
@@ -366,7 +365,7 @@ func (obj *ObjectStore) postAuthenticatedPostAPI(w http.ResponseWriter, r *http.
 			err := decoder.Decode(&a)
 			if err != nil {
 				json.NewEncoder(w).Encode(response.Response{Status: false, Message: "appetizers page JSON API invalid"})
-				log.Fatal(err)
+				fmt.Println(err.Error())
 			}
 			defer r.Body.Close()
 			obj.Appetizers_List.Update(&a)
@@ -378,7 +377,7 @@ func (obj *ObjectStore) postAuthenticatedPostAPI(w http.ResponseWriter, r *http.
 				err := decoder.Decode(&a)
 				if err != nil {
 					json.NewEncoder(w).Encode(response.Response{Status: false, Message: "appetizers/cheesybread page JSON API invalid"})
-					log.Fatal(err)
+					fmt.Println(err.Error())
 				}
 				defer r.Body.Close()
 				obj.Cheesybread_List.Update(&a)
@@ -403,7 +402,7 @@ func (obj *ObjectStore) postAuthenticatedPostAPI(w http.ResponseWriter, r *http.
 				err := decoder.Decode(&a)
 				if err != nil {
 					json.NewEncoder(w).Encode(response.Response{Status: false, Message: "appetizers/chickenfingers page JSON API invalid"})
-					log.Fatal(err)
+					fmt.Println(err.Error())
 				}
 				defer r.Body.Close()
 				obj.Chickenfingers_List.Update(&a)
@@ -428,7 +427,7 @@ func (obj *ObjectStore) postAuthenticatedPostAPI(w http.ResponseWriter, r *http.
 				err := decoder.Decode(&a)
 				if err != nil {
 					json.NewEncoder(w).Encode(response.Response{Status: false, Message: "appetizers/quesadilla page JSON API invalid"})
-					log.Fatal(err)
+					fmt.Println(err.Error())
 				}
 				defer r.Body.Close()
 				obj.Quesadilla_List.Update(&a)
@@ -469,7 +468,7 @@ func (obj *ObjectStore) postAuthenticatedPostAPI(w http.ResponseWriter, r *http.
 			err := decoder.Decode(&d)
 			if err != nil {
 				json.NewEncoder(w).Encode(response.Response{Status: false, Message: "drinks page JSON API invalid"})
-				log.Fatal(err)
+				fmt.Println(err.Error())
 			}
 			defer r.Body.Close()
 			obj.Drinks_List.Update(&d)
@@ -482,7 +481,7 @@ func (obj *ObjectStore) postAuthenticatedPostAPI(w http.ResponseWriter, r *http.
 				err := decoder.Decode(&d)
 				if err != nil {
 					json.NewEncoder(w).Encode(response.Response{Status: false, Message: "drinks/bottled page JSON API invalid"})
-					log.Fatal(err)
+					fmt.Println(err.Error())
 				}
 				defer r.Body.Close()
 				obj.Bottled_Drinks_List.Update(&d)
@@ -510,7 +509,7 @@ func (obj *ObjectStore) postAuthenticatedPostAPI(w http.ResponseWriter, r *http.
 				err := decoder.Decode(&d)
 				if err != nil {
 					json.NewEncoder(w).Encode(response.Response{Status: false, Message: "drinks/fountain page JSON API invalid"})
-					log.Fatal(err)
+					fmt.Println(err.Error())
 				}
 				defer r.Body.Close()
 				obj.Fountain_Drinks_List.Update(&d)
@@ -554,7 +553,7 @@ func (obj *ObjectStore) postAuthenticatedPostAPI(w http.ResponseWriter, r *http.
 			err := decoder.Decode(&s)
 			if err != nil {
 				json.NewEncoder(w).Encode(response.Response{Status: false, Message: "sides page JSON API invalid"})
-				log.Fatal(err)
+				fmt.Println(err.Error())
 			}
 			defer r.Body.Close()
 			obj.Sides_List.Update(&s)
@@ -568,7 +567,7 @@ func (obj *ObjectStore) postAuthenticatedPostAPI(w http.ResponseWriter, r *http.
 				err := decoder.Decode(&s)
 				if err != nil {
 					json.NewEncoder(w).Encode(response.Response{Status: false, Message: "sides/chips page JSON API invalid"})
-					log.Fatal(err)
+					fmt.Println(err.Error())
 				}
 				defer r.Body.Close()
 
@@ -596,7 +595,7 @@ func (obj *ObjectStore) postAuthenticatedPostAPI(w http.ResponseWriter, r *http.
 				err := decoder.Decode(&s)
 				if err != nil {
 					json.NewEncoder(w).Encode(response.Response{Status: false, Message: "sides/sauces page JSON API invalid"})
-					log.Fatal(err)
+					fmt.Println(err.Error())
 				}
 				defer r.Body.Close()
 				obj.Sauces_List.Update(&s)
@@ -636,7 +635,7 @@ func (obj *ObjectStore) postAuthenticatedPostAPI(w http.ResponseWriter, r *http.
 			err := decoder.Decode(&a)
 			if err != nil {
 				json.NewEncoder(w).Encode(response.Response{Status: false, Message: "auth page JSON API invalid"})
-				log.Fatal(err)
+				fmt.Println(err.Error())
 			}
 			defer r.Body.Close()
 			obj.Admins.Update(&a)
