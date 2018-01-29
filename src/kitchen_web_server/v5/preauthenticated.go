@@ -57,7 +57,6 @@ func (obj *ObjectStore) PreAuthenticatedPostAPI(w http.ResponseWriter, r *http.R
 		// Other than logging in, everything else done on this API including the GET and POST can only be done if they user accomplishes this via the secure token link that was generated when they logged in
 	} else {
 		token := vars["slug1"]
-		// fmt.Println(token)
 		if obj.Tokens.Validate(token) {
 			obj.postAuthenticatedPostAPI(w, r)
 		} else {

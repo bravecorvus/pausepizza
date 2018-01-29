@@ -17,9 +17,14 @@ import (
 )
 
 type response_struct struct {
-	Status  bool
-	Message string
-	OrderID string
+	Status  bool   `json:"status"`
+	Message string `json:"message"`
+	OrderID string `json:"orderID"`
+}
+
+type kitchen_response_struct struct {
+	status  bool   `json:"Status"`
+	message string `json:"Message"`
 }
 
 func Pwd() string {
@@ -129,7 +134,7 @@ func PostAPI(w http.ResponseWriter, r *http.Request) {
 			fmt.Println("Trouble marshalling just the admin login struct (i.e. just the username and password field)")
 		}
 		body := bytes.NewReader(adminlogin)
-		req, err6 := http.NewRequest("POST", "localhost:7000/login", body)
+		req, err6 := http.NewRequest("POST", "http://localhost:7000/v5/login", body)
 		if err6 != nil {
 			fmt.Println("Couldn't construct the post to the login endpoint to get the superadmin token")
 		}
@@ -149,12 +154,21 @@ func PostAPI(w http.ResponseWriter, r *http.Request) {
 			fmt.Println("Trouble unmarshaling the token received from the login endpoint")
 		}
 
-		resp, err10 := http.Post("localhost:7000/v5/"+token.Token+"/neworder", "application/json", bytes.NewBuffer(marshaled))
+		resp2, err10 := http.Post("http://localhost:7000/v5/"+token.Token+"/neworder", "application/json", bytes.NewBuffer(marshaled))
 		if err10 != nil {
 			fmt.Println("Can't post to neworder endpoint")
 		}
-		fmt.Println(resp)
 		defer r.Body.Close()
+		var server_resp kitchen_response_struct
+		body2, err11 := ioutil.ReadAll(resp2.Body)
+		if err11 != nil {
+			fmt.Println("Couldn't read kitchen server to client ordering app response to add new order")
+		}
+		err12 := json.Unmarshal(body2, &server_resp)
+		if err12 != nil {
+			fmt.Println("Couldn't unmarshal kitchen server to client response")
+		}
+		json.NewEncoder(w).Encode(response_struct{Status: true, Message: "Order sucessfully registered", OrderID: o.OrderID})
 
 	} else if vars["slug1"] == "ordercomplete" {
 		orderid := vars["slug2"]

@@ -1,19 +1,19 @@
 {
 	"tokens": [
 		{
-			"associatedUser": "leeas",
-			"value": "3rtu6CnIzQEwomFuUvaT9hijeBRYfmHfSxkyTRzf",
-			"timestamp": "2018-01-29T21:11:19.400182-06:00"
-		},
-		{
 			"associatedUser": "3kG5\u0026SjAmi4\u0026Z5Mi",
 			"value": "awcEgMvEzfC2hWlWRIt1QzYL5mOLr7nyEOeXKwbq",
 			"timestamp": "2018-01-29T22:49:26.178661-06:00"
 		},
 		{
 			"associatedUser": "6rmV4KhqUjWjHW408JhLvzs0X1JCPmVs7yvixYI0",
-			"value": "JuRe2pQqyP2gpMRi47vJYAh5BgOtw27LudqEnku1",
-			"timestamp": "2018-01-30T01:26:56.512566-06:00"
+			"value": "HwSOWCMMcy5vSU0xrLPBQ620ZKt9Jmq5unYpaZkT",
+			"timestamp": "2018-01-30T06:10:28.613186-06:00"
+		},
+		{
+			"associatedUser": "leeas",
+			"value": "MCkpC3ozTyMdY2l6Nd56A1wCCQHAzLWptJIkdOKY",
+			"timestamp": "2018-01-30T06:21:02.156057-06:00"
 		}
 	]
 }
