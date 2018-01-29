@@ -9,6 +9,7 @@ import (
 	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/drinks"
 	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/ingredients"
 	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/landing"
+	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/orders"
 	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/pizza"
 	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/sides"
 )
@@ -56,6 +57,7 @@ type ObjectStore struct {
 	Tokens               *auth.TokenList
 	Admins               *auth.ValidUsersList
 	SuperAdmin           *auth.Super
+	Orders_List          *orders.OrderList
 }
 
 // Initializes the in-program store of all objects that is kept track of by the Pause Kitchen application.
@@ -91,6 +93,7 @@ func (obj *ObjectStore) Initialize() {
 	obj.Tokens = &auth.TokenList{}
 	obj.Admins = &auth.ValidUsersList{}
 	obj.SuperAdmin = &auth.Super{}
+	obj.Orders_List = &orders.OrderList{}
 
 	obj.Pizza_List.Initialize()
 	obj.Pizza_Specialty_List.Initialize()
@@ -115,4 +118,5 @@ func (obj *ObjectStore) Initialize() {
 	obj.Tokens.Initialize()
 	obj.Admins.Initialize()
 	obj.SuperAdmin.Initialize()
+	obj.Orders_List.Initialize()
 }

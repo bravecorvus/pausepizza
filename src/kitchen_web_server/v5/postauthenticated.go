@@ -11,6 +11,7 @@ import (
 	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/drinks"
 	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/ingredients"
 	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/landing"
+	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/orders"
 	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/photoshopjr"
 	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/pizza"
 	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/response"
@@ -90,6 +91,10 @@ func (obj *ObjectStore) postAuthenticatedGetAPI(w http.ResponseWriter, r *http.R
 	} else if vars["slug2"] == "tokens" {
 		if vars["slug3"] == "" {
 			http.ServeFile(w, r, utils.AssetsDir()+"v5/tokens/list.json")
+		}
+	} else if vars["slug2"] == "orders" {
+		if vars["slug3"] == "" {
+			http.ServeFile(w, r, utils.AssetsDir()+"v5/orders/list.json")
 		}
 	}
 
@@ -641,6 +646,32 @@ func (obj *ObjectStore) postAuthenticatedPostAPI(w http.ResponseWriter, r *http.
 			obj.Admins.Update(&a)
 
 		}
+	} else if vars["slug2"] == "neworder" {
+		decoder := json.NewDecoder(r.Body)
+		var o orders.Order
+		err := decoder.Decode(&o)
+		if err != nil {
+			json.NewEncoder(w).Encode(response.Response{Status: false, Message: "neworder JSON API invalid"})
+			fmt.Println(err.Error())
+		}
+		json.NewEncoder(w).Encode(response.Response{Status: true, Message: "Order added to order list"})
+		defer r.Body.Close()
+		obj.Orders_List.AddNewOrder(&o)
+		obj.Orders_List.WriteFile()
+
+	} else if vars["slug2"] == "ordercomplete" {
+		orderid := vars["slug3"]
+		if obj.Orders_List.CheckValidOrder(orderid) {
+			obj.Orders_List.RemoveOrderFromList(orderid)
+		}
+
+		resp, err := http.Post("localhost:8000/v5/ordercomplete/"+orderid, "", nil)
+		if err != nil {
+			fmt.Println(err.Error())
+		}
+		defer resp.Body.Close()
+		fmt.Println(resp.Body)
+
 	}
 
 }

@@ -23,15 +23,6 @@ func FilesDir() string {
 	return Pwd() + "assets/files/"
 }
 
-// func ReadFile(arg string) string {
-// content, err := ioutil.ReadFile(AssetsDir() + arg)
-// if err != nil {
-// fmt.Println("ERROR ReadFile()")
-// }
-// lines := strings.Split(string(content), "\n")
-// return lines[0]
-// }
-
 func TruncateString(str string, num int) string {
 	bnoden := str
 	if len(str) > num {

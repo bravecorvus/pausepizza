@@ -1,14 +1,18 @@
 {
-  "dorm" : "Thorson",
-  "itemsOrdered" : [
+  "list" : [
     {
-      "category" : "Pizza",
-      "extraIncrement" : ["Chicken", "Bacon"],
-      "increment" : "Large",
-      "item" : "Build Your Own Pizza"
+      "dorm" : "Thorson",
+      "itemsOrdered" : [
+        {
+          "category" : "Pizza",
+          "extraIncrement" : ["Chicken", "Bacon"],
+          "increment" : "Large",
+          "item" : "Build Your Own Pizza"
+        }
+      ],
+      "name" : "Deepak",
+      "phone" : "55566677777",
+      "price" : 11.50
     }
-  ],
-  "name" : "Deepak",
-  "phone" : "55566677777",
-  "price" : 11.50
+  ]
 }
