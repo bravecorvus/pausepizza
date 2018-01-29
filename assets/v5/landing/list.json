@@ -1,9 +1,9 @@
 {
 	"pauseinfo": {
 		"kitchenOpen": false,
-		"deliveryAvailable": false,
-		"ovenOn": false,
-		"lateMenu": false
+		"deliveryAvailable": true,
+		"ovenOn": true,
+		"lateMenu": true
 	},
 	"list": [
 		{
