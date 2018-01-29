@@ -15,10 +15,10 @@
 			"api": "v5/pizza"
 		},
 		{
-			"title": "Dessert",
+			"title": "Desserts",
 			"image": {
-				"normal": "files/dessert.jpg",
-				"monochrome": "files/dessert.mono.jpg"
+				"normal": "files/desserts.jpg",
+				"monochrome": "files/desserts.mono.jpg"
 			},
 			"api": "v5/desserts"
 		},
