@@ -20,6 +20,12 @@ import (
 	"github.com/gorilla/mux"
 )
 
+// The GET endpoints are fairly self explanatory.
+// For every endpoint
+//	[ep]
+// it returns the file located at
+//	[ep]/list.json
+// It is the job of the preauthenticatedGETAPI() in preauthenticated.go to validate tokens (which is passed as slug 1) and generate new tokens based on logins.
 func (obj *ObjectStore) postAuthenticatedGetAPI(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 
@@ -89,6 +95,8 @@ func (obj *ObjectStore) postAuthenticatedGetAPI(w http.ResponseWriter, r *http.R
 
 }
 
+// The POST endpoings handles changes to the JSON objects themselves (creates a new pointer based on that object, and reassigns the pointer of *obj.Object the new pointer).
+// Also, the endpoints also handle images. For a reference on how post to image endpoints, please look at the overall documentation introduction.
 func (obj *ObjectStore) postAuthenticatedPostAPI(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	// fmt.Println(vars)

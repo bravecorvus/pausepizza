@@ -12,6 +12,8 @@ import (
 	"github.com/gorilla/mux"
 )
 
+// This is the first point that all GET requests go through.
+// If a valid token is not provided as slug1, the API will not pass on the GET request to any authenticated endpoints.
 func (obj *ObjectStore) PreAuthenticatedGetAPI(w http.ResponseWriter, r *http.Request) {
 
 	vars := mux.Vars(r)
@@ -25,6 +27,8 @@ func (obj *ObjectStore) PreAuthenticatedGetAPI(w http.ResponseWriter, r *http.Re
 
 }
 
+// This is the first point that all POST requests go through.
+// If a valid token is not provided as slug1, the API will not pass on the request to any authenticated endpoints.
 func (obj *ObjectStore) PreAuthenticatedPostAPI(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 
@@ -40,6 +44,9 @@ func (obj *ObjectStore) PreAuthenticatedPostAPI(w http.ResponseWriter, r *http.R
 
 		// AUTH
 		if obj.Admins.Validate(query.Username, query.Password) {
+			tokens := auth.GenerateNewToken(query.Username, 24*time.Hour)
+			json.NewEncoder(w).Encode(tokens.Tokens[len(tokens.Tokens)-1])
+		} else if obj.SuperAdmin.Validate(query.Username, query.Password) {
 			tokens := auth.GenerateNewToken(query.Username, 24*time.Hour)
 			json.NewEncoder(w).Encode(tokens.Tokens[len(tokens.Tokens)-1])
 		} else {

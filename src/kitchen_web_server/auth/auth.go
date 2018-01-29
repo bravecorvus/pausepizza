@@ -45,6 +45,7 @@ func (auth_list *ValidUsersList) WriteFile() {
 	}
 }
 
+// Validate will return true if a username/password combination exists in a given ValidUsersList
 func (auth_list *ValidUsersList) Validate(username, password string) bool {
 	for _, user := range auth_list.ValidUsers {
 		// fmt.Println(user.Username)

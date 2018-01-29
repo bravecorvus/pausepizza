@@ -15,6 +15,7 @@
 //
 // This server does not implement a database of any kind. Although the argument can be made that using a database will ease the stress of expansion and allow for the accumulation of a ton of new items. However, for this specific project, there are no requirements for either. Unlike a typical website that hosts content created by users, the objects that need to be stored in this server will be fairly small in number and variety. Furthermore, while fast, using a database to find values before sending to the client will always be slower than statically hosting the JSON files.
 // Furthermore, comparing the number the stateful data operations only need to occur when the Kitchen Management App needs to change somemthing versus the amount of people trying to access that data on the client ordering app (the ordering app will access those static file serving endpoints 100's of 1000's of times more often than the Kitchen side will modify items), it seemed like a logical decision to having the JSON files that are being served at the GET endpoints serve as the stateful database of some sorts, and to have this server write to those files directly.
+// Since the code to Initialize(), WriteFile(write struct to JSON files), and Upate() all follow a similar pattern, this documentation will only document this once in the appetizers package.
 //
 // Authentication
 //
@@ -78,6 +79,13 @@
 //
 // Uploading a picture follows this pattern in curl:
 //	curl -F 'file=@filename.JPEG'  [server address]/v5/[generated token]/pizza/specialty/Chicken_Bacon_Ranch_Pizza.Large
+// The last slug "Chicken_Bacon_Ranch_Pizza.Large" will be converted into two strings on the server side:
+//	1) Chicken Bacon Ranch
+//	2) Large
+// The first string will reflect the Title element of an object and the second represents the Parameter field of an object.
+// [Title_Name.Parameter] is only necessary if the image requires a parameter attribute. If there are no parameters (such as for the Pizza endpoint objects), you can post as follows:
+//	curl -F 'file=@filename.JPEG'  [server address]/v5/[generated token]/pizza/Build_Your_Own_Pizza
+// (Note: you can get the information regarding whether the image needs a parameter attribute by looking at the JSON files themselves.)
 // The server is built to handle both JPEG and PNG files and once it verifies that the uploaded image is a valid JPEG or PNG file, it will first send the success response to the sender, and asyncronously process the image using a gorouting (see package photoshopjr).
 // The processing that occurs here is to convert the image to JPEG if it was a PNG, to crop the image to be 500x500px (upsizing the image if it is too smal and cropping it if too large), and finally a separate monochromaic image is also generated.
 //

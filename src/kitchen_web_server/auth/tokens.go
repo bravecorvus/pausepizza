@@ -65,6 +65,7 @@ func GenerateNewToken(username string, duration time.Duration) TokenList {
 	return tl
 }
 
+// DeleteToken() will find any tokens that have expired, and delete them from the list
 func DeleteOldTokens() {
 	tl := TokenList{}
 	tl.Initialize()
@@ -76,10 +77,9 @@ func DeleteOldTokens() {
 	tl.WriteFile()
 }
 
+// removePreviousEntryByUsername() will look for any tokens associated with a specific user, and delete it
 func (tl *TokenList) removePreviousEntryByUsername(username string) {
 	for i, token := range tl.Tokens {
-		// fmt.Println("if token.AssociatedUser == username {... username=", username)
-		// fmt.Println("if token.AssociatedUser == username {... token.AssociatedUser=", token.AssociatedUser)
 		// fmt.Println(tl.Tokens)
 		if token.AssociatedUser == username {
 			tl.Tokens = append(tl.Tokens[:i], tl.Tokens[i+1:]...)
@@ -89,6 +89,7 @@ func (tl *TokenList) removePreviousEntryByUsername(username string) {
 	tl.WriteFile()
 }
 
+// removePreviousEntryByUsername() will search for a specific token, and delete it if it exists.
 func (tl *TokenList) removePreviousEntryByHash(hash string) {
 	for i, token := range tl.Tokens {
 		if token.Value == hash {
@@ -98,6 +99,7 @@ func (tl *TokenList) removePreviousEntryByHash(hash string) {
 	tl.WriteFile()
 }
 
+// A function to generate a random 40 character string using time.Now as a seed to use as a secure token.
 func generateRandomHash() string {
 
 	b := make([]byte, 40)
@@ -118,6 +120,7 @@ func generateRandomHash() string {
 	return string(b)
 }
 
+// Validate if token is a valid current one or not
 func (tl *TokenList) Validate(hash string) bool {
 	for _, token := range tl.Tokens {
 		// fmt.Println(token.AssociatedUser)

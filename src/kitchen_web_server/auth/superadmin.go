@@ -8,6 +8,7 @@ import (
 	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/utils"
 )
 
+// Struct Super will contain the both the current superadmin username and password as well as the email list for those that need to receive the combination by email.
 type Super struct {
 	SA  SuperAdmin `json:"superadmin"`
 	EML []string   `json:"emailList"`
@@ -40,6 +41,7 @@ func (super *Super) WriteFile() {
 	}
 }
 
+// Validate() will true if the username and password combination is indeed the super user
 func (super *Super) Validate(username, password string) bool {
 	if super.SA.Username == username && super.SA.Password == password {
 		return true
@@ -48,7 +50,7 @@ func (super *Super) Validate(username, password string) bool {
 	}
 }
 
-// func SendEmail(to, subject, message string) {
+// Update will update the superadmin struct with new values from the arguments, writing those changes to file, and then email everyone on the email list with the new username and password
 func (super *Super) Update(arg *Super) {
 	*super = *arg
 	super.WriteFile()
