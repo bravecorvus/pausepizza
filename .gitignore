@@ -1,6 +1,7 @@
 src/kitchen_web_server/auth/email.go
 src/kitchen_web_server/auth/email_test.go
 assets/v5/auth/*
+assets/v5/tokens/*
 assets/v5/superadmin/*
 src/kitchen_web_server/assets
 src/kitchen_web_server/assets/v5/tokens/list.json
