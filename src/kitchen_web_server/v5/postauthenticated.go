@@ -2,6 +2,7 @@ package v5
 
 import (
 	"encoding/json"
+	"fmt"
 	"log"
 	"net/http"
 
@@ -116,6 +117,8 @@ func (obj *ObjectStore) postAuthenticatedPostAPI(w http.ResponseWriter, r *http.
 			defer r.Body.Close()
 			obj.Landing_List.Update(&l)
 		} else if vars["slug3"] == "set" {
+			fmt.Println(r)
+			fmt.Println(r.Body)
 			decoder := json.NewDecoder(r.Body)
 			var s landing.TimesItems
 			err := decoder.Decode(&s)

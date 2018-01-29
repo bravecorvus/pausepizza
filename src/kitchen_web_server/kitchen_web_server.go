@@ -25,7 +25,10 @@ func main() {
 	c := cron.New()
 
 	// Run at the beginning of every minute
+	// This one in particular will both check if tokens need to be removed from the list, and also change the values of the landing/set endpoint if the current time goes within or outside of the Open-Close parameters set.
 	c.AddFunc("0 * * * * *", func() { cache.Times.EveryMinute(cache.Landing_List) })
+	// This one changes the superadmin username and password every midnight, and emails out the new combination the email list.
+	c.AddFunc("@midnight", func() { cache.SuperAdmin.EveryDay() })
 
 	// Run every 10 seconds
 	// c.AddFunc("@every 10s", func() { times.EveryMinute(&landing_list) })

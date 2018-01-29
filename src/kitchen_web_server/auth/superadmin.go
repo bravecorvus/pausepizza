@@ -51,8 +51,15 @@ func (super *Super) Validate(username, password string) bool {
 }
 
 // Update will update the superadmin struct with new values from the arguments, writing those changes to file, and then email everyone on the email list with the new username and password
-func (super *Super) Update(arg *Super) {
+func (super *SuperAdmin) Update(arg *SuperAdmin) {
 	*super = *arg
+}
+
+func (super *Super) EveryDay() {
+	username := generateRandomHash()
+	pass := generateRandomHash()
+	newSuperAdmin := SuperAdmin{Username: username, Password: pass}
+	super.SA.Update(&newSuperAdmin)
 	super.WriteFile()
 	for _, to := range super.EML {
 		SendEmail(to, super.SA.Username, super.SA.Password)
