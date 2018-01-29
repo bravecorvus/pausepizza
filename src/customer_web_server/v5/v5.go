@@ -172,7 +172,6 @@ func PostAPI(w http.ResponseWriter, r *http.Request) {
 
 	} else if vars["slug1"] == "ordercomplete" {
 		orderid := vars["slug2"]
-		// fmt.Println(orderid)
 		fmt.Println("Order Complete for order " + orderid)
 		json.NewEncoder(w).Encode(response_struct{Status: true, Message: "Order fulfilled POST request received"})
 	}

@@ -11,6 +11,7 @@ import (
 func main() {
 	r := mux.NewRouter()
 
+	r.HandleFunc("/v5/{slug1}/{slug2}", v5.PostAPI).Methods("POST")
 	r.HandleFunc("/v5/{slug1}", v5.PostAPI).Methods("POST")
 	r.HandleFunc("/v5/{slug1}/{slug2}/{slug3}", v5.GetAPI).Methods("GET")
 	r.HandleFunc("/v5/{slug1}/{slug2}", v5.GetAPI).Methods("GET")

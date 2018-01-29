@@ -660,8 +660,8 @@ func (obj *ObjectStore) postAuthenticatedPostAPI(w http.ResponseWriter, r *http.
 		obj.Orders_List.WriteFile()
 
 	} else if vars["slug2"] == "ordercomplete" {
-		fmt.Println("Order Complete")
 		orderid := vars["slug3"]
+		fmt.Println("Order Complete for " + orderid)
 		if obj.Orders_List.CheckValidOrder(orderid) {
 			obj.Orders_List.RemoveOrderFromList(orderid)
 			obj.Orders_List.WriteFile()
