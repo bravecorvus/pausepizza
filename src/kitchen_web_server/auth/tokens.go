@@ -50,10 +50,10 @@ func (tl *TokenList) WriteFile() {
 }
 
 // This function creates a new Token object with the passed in username, a randomly generated alphanumeric sequence as the hash of length 40, and a expiration timestamp of when it will expire (the desired duration is passed as duration [the second argument])
-func GenerateNewToken(username string, duration time.Duration) TokenList {
+func (tl *TokenList) GenerateNewToken(username string, duration time.Duration) {
 	// Delete old tokens if any exist for a specific user
-	tl := TokenList{}
-	tl.Initialize()
+	// tl := TokenList{}
+	// tl.Initialize()
 	tl.removePreviousEntryByUsername(username)
 
 	t := Token{AssociatedUser: username, Value: generateRandomHash(), Timestamp: time.Now().Add(duration)}
@@ -62,7 +62,6 @@ func GenerateNewToken(username string, duration time.Duration) TokenList {
 
 	tl.Tokens = append(tl.Tokens, t)
 	tl.WriteFile()
-	return tl
 }
 
 // DeleteToken() will find any tokens that have expired, and delete them from the list
@@ -120,14 +119,16 @@ func generateRandomHash() string {
 	return string(b)
 }
 
-// Validate if token is a valid current one or not
+// Validate if token is a valid current token or not
 func (tl *TokenList) Validate(hash string) bool {
 	for _, token := range tl.Tokens {
-		// fmt.Println(token.AssociatedUser)
-		// fmt.Println(token.Value)
 		if hash == token.Value && token.Timestamp.Sub(time.Now()) > 0 {
 			return true
 		}
 	}
 	return false
+}
+
+func (tl *TokenList) Len() int {
+	return len(tl.Tokens)
 }

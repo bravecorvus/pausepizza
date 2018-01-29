@@ -3,7 +3,6 @@ package main
 import (
 	"net/http"
 
-	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/v4"
 	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/v5"
 
 	"github.com/gorilla/mux"
@@ -33,17 +32,6 @@ func main() {
 	c.Start()
 
 	r := mux.NewRouter()
-
-	// API v4
-	// HTTP GET Methods
-	r.HandleFunc("/v4/{slug1}/{slug2}/{slug3}", v4.GetAPI).Methods("GET")
-	r.HandleFunc("/v4/{slug1}/{slug2}", v4.GetAPI).Methods("GET")
-	r.HandleFunc("/v4/{slug1}", v4.GetAPI).Methods("GET")
-
-	// HTTP POST Methods
-	r.HandleFunc("/v4/{slug1}/{slug2}/{slug3}", v4.PostAPI).Methods("POST")
-	r.HandleFunc("/v4/{slug1}/{slug2}", v4.PostAPI).Methods("POST")
-	r.HandleFunc("/v4/{slug1}", v4.PostAPI).Methods("POST")
 
 	// API v5
 	// HTTP GET Methods

@@ -44,11 +44,11 @@ func (obj *ObjectStore) PreAuthenticatedPostAPI(w http.ResponseWriter, r *http.R
 
 		// AUTH
 		if obj.Admins.Validate(query.Username, query.Password) {
-			tokens := auth.GenerateNewToken(query.Username, 24*time.Hour)
-			json.NewEncoder(w).Encode(tokens.Tokens[len(tokens.Tokens)-1])
+			obj.Tokens.GenerateNewToken(query.Username, 24*time.Hour)
+			json.NewEncoder(w).Encode(obj.Tokens.Tokens[len(obj.Tokens.Tokens)-1])
 		} else if obj.SuperAdmin.Validate(query.Username, query.Password) {
-			tokens := auth.GenerateNewToken(query.Username, 24*time.Hour)
-			json.NewEncoder(w).Encode(tokens.Tokens[len(tokens.Tokens)-1])
+			obj.Tokens.GenerateNewToken(query.Username, 24*time.Hour)
+			json.NewEncoder(w).Encode(obj.Tokens.Tokens[len(obj.Tokens.Tokens)-1])
 		} else {
 			json.NewEncoder(w).Encode(response.Response{Status: false, Message: "Username and Password combination does not exist. If you forgot your password, please talk to another manager for the app "})
 
@@ -57,8 +57,8 @@ func (obj *ObjectStore) PreAuthenticatedPostAPI(w http.ResponseWriter, r *http.R
 		// Other than logging in, everything else done on this API including the GET and POST can only be done if they user accomplishes this via the secure token link that was generated when they logged in
 	} else {
 		token := vars["slug1"]
+		// fmt.Println(token)
 		if obj.Tokens.Validate(token) {
-			// if auth.Validate(token) {
 			obj.postAuthenticatedPostAPI(w, r)
 		} else {
 			json.NewEncoder(w).Encode(response.Response{Status: false, Message: "User did not access link with valid token. Please log in"})
