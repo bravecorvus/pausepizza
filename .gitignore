@@ -6,3 +6,4 @@ src/kitchen_web_server/assets
 src/kitchen_web_server/assets/v5/tokens/list.json
 src/kitchen_web_server/kitchen_web_server
 src/customer_web_server/customer_web_server
+src/kitchen_web_server/assets/*
