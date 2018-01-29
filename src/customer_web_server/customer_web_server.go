@@ -3,8 +3,8 @@ package main
 import (
 	"net/http"
 
-	"./v4"
-	"./v5"
+	"github.com/gilgameshskytrooper/pausepizza/src/customer_web_server/v4"
+	"github.com/gilgameshskytrooper/pausepizza/src/customer_web_server/v5"
 
 	"github.com/gorilla/mux"
 )
