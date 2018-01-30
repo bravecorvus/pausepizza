@@ -1,6 +1,12 @@
 package websocket
 
-import "github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/orders"
+import (
+	"encoding/json"
+	"fmt"
+	"time"
+
+	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/orders"
+)
 
 type Hub struct {
 	clients   map[string]*Client
@@ -62,4 +68,20 @@ func (hub *Hub) SendToUser(o orders.Order) {
 
 func (hub *Hub) Broadcast(o orders.Order) {
 	hub.clients[o.OrderID].send <- Message{To: o.OrderID, Type: "broadcast", Payload: o}
+}
+
+func (h *Hub) runfunc() {
+	time.Sleep(30 * time.Second)
+	var o orders.Order
+	bytes := []byte(`{"dorm":"Thorson","itemsOrdered":[{"category":"Pizza","extraIncrement":["Chicken","Bacon"],"increment":"Large","item":"Build Your Own Pizza"}],"name":"Deepak","phone":"55566677777","price":11.5,"OrderID":"5PSW9QjylBRDjIEdJlKkrOrYFJmxQ2nF2BHASr3x"}`)
+	err1 := json.Unmarshal(bytes, &o)
+	if err1 != nil {
+		fmt.Println("Cant decode o struct")
+	}
+	fmt.Println(o)
+	h.SendToUser(o)
+	time.Sleep(3 * time.Second)
+	h.SendToUser(o)
+	time.Sleep(3 * time.Second)
+	h.SendToUser(o)
 }

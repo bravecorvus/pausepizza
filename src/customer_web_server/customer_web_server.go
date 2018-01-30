@@ -19,6 +19,7 @@ func init() {
 
 func main() {
 	r := mux.NewRouter()
+	go cache.WebSocketHub.Runfunc()
 
 	r.HandleFunc("/v5/ws", func(w http.ResponseWriter, r *http.Request) {
 		websocket.ServeClient(cache.WebSocketHub, w, r)

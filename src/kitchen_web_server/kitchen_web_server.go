@@ -23,7 +23,6 @@ func main() {
 
 	// Cron Jobs (Things that it makes sense for time sensitive API endpoints (i.e. the Pause Kitchen is open or closed) will be done through a globally running cron job)
 	c := cron.New()
-
 	// Run at the beginning of every minute
 	// This one in particular will both check if tokens need to be removed from the list, and also change the values of the landing/set endpoint if the current time goes within or outside of the Open-Close parameters set.
 	c.AddFunc("0 * * * * *", func() { cache.Times.EveryMinute(cache.Landing_List) })
