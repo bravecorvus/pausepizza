@@ -32,8 +32,9 @@ var upgrader = websocket.Upgrader{
 }
 
 func ServeClient(hub *Hub, w http.ResponseWriter, r *http.Request) {
-	fmt.Println("ServeClient")
+	fmt.Println("Before upgrader.Upgrade")
 	var conn, err = upgrader.Upgrade(w, r, nil)
+	fmt.Println("After upgrader.Upgrade")
 	defer conn.Close()
 
 	if err != nil {
