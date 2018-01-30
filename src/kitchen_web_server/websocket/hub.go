@@ -70,7 +70,7 @@ func (hub *Hub) Broadcast(o orders.Order) {
 	hub.clients[o.OrderID].send <- Message{To: o.OrderID, Type: "broadcast", Payload: o}
 }
 
-func (h *Hub) runfunc() {
+func (h *Hub) Runfunc() {
 	time.Sleep(30 * time.Second)
 	var o orders.Order
 	bytes := []byte(`{"dorm":"Thorson","itemsOrdered":[{"category":"Pizza","extraIncrement":["Chicken","Bacon"],"increment":"Large","item":"Build Your Own Pizza"}],"name":"Deepak","phone":"55566677777","price":11.5,"OrderID":"5PSW9QjylBRDjIEdJlKkrOrYFJmxQ2nF2BHASr3x"}`)
