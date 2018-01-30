@@ -19,7 +19,7 @@ type ObjectStore struct {
 }
 
 func (obj *ObjectStore) Initialize() {
-	obj.WebSocketHub = websocket.NewHub()
+	obj.WebSocketHub.Initialize()
 }
 
 type response_struct struct {
