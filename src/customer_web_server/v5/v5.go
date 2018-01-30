@@ -122,7 +122,9 @@ func (obj *ObjectStore) PostAPI(w http.ResponseWriter, r *http.Request) {
 
 		}
 		defer r.Body.Close()
-		go obj.WebSocketHub.SendToUser(order)
+		fmt.Println("before SendToUser() called")
+		obj.WebSocketHub.SendToUser(order)
+		fmt.Println("after SendToUser() called")
 		json.NewEncoder(w).Encode(response_struct{Status: true, Message: "Order fulfilled POST request received"})
 	}
 }

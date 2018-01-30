@@ -28,6 +28,7 @@ var upgrader = websocket.Upgrader{CheckOrigin: func(r *http.Request) bool {
 }}
 
 func ServeClient(hub *Hub, w http.ResponseWriter, r *http.Request) {
+	fmt.Println("ServeClient")
 	var conn, err = upgrader.Upgrade(w, r, nil)
 
 	if err != nil {
