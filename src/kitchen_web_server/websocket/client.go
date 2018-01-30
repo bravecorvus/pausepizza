@@ -32,6 +32,7 @@ var upgrader = websocket.Upgrader{
 }
 
 func ServeClient(hub *Hub, w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Access-Control-Allow-Origin", "*")
 	fmt.Println("SERVE CLIENT")
 	fmt.Println("Before upgrader.Upgrade")
 	var conn, err = upgrader.Upgrade(w, r, nil)
