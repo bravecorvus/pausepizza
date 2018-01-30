@@ -23,7 +23,9 @@ type Message struct {
 	Payload orders.Order `json:"payload"`
 }
 
-var upgrader = websocket.Upgrader{}
+var upgrader = websocket.Upgrader{CheckOrigin: func(r *http.Request) bool {
+	return true
+}}
 
 func ServeClient(hub *Hub, w http.ResponseWriter, r *http.Request) {
 	var conn, err = upgrader.Upgrade(w, r, nil)
