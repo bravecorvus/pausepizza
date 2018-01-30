@@ -10,17 +10,16 @@ import (
 
 	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/orders"
 	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/response"
-	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/websocket"
 	"github.com/gorilla/mux"
 )
 
-type ObjectStore struct {
-	WebSocketHub *websocket.Hub
-}
-
-func (obj *ObjectStore) Initialize() {
-	obj.WebSocketHub.Initialize()
-}
+// type ObjectStore struct {
+// WebSocketHub *websocket.Hub
+// }
+//
+// func (obj *ObjectStore) Initialize() {
+// obj.WebSocketHub = websocket.NewHub()
+// }
 
 type response_struct struct {
 	Status  bool   `json:"status"`
@@ -49,7 +48,8 @@ func AssetsDir() string {
 	return Pwd() + "assets/"
 }
 
-func (obj *ObjectStore) GetAPI(w http.ResponseWriter, r *http.Request) {
+// func (obj *ObjectStore) GetAPI(w http.ResponseWriter, r *http.Request) {
+func GetAPI(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 
 	// Landing
@@ -106,7 +106,8 @@ func (obj *ObjectStore) GetAPI(w http.ResponseWriter, r *http.Request) {
 
 }
 
-func (obj *ObjectStore) PostAPI(w http.ResponseWriter, r *http.Request) {
+// func (ObjectStore) PostAPI(w http.ResponseWriter, r *http.Request) {
+func PostAPI(w http.ResponseWriter, r *http.Request) {
 
 	vars := mux.Vars(r)
 	if vars["slug1"] == "checkout" {
@@ -123,7 +124,7 @@ func (obj *ObjectStore) PostAPI(w http.ResponseWriter, r *http.Request) {
 		}
 		defer r.Body.Close()
 		fmt.Println("before SendToUser() called")
-		obj.WebSocketHub.SendToUser(order)
+		// obj.WebSocketHub.SendToUser(order)
 		fmt.Println("after SendToUser() called")
 		json.NewEncoder(w).Encode(response_struct{Status: true, Message: "Order fulfilled POST request received"})
 	}

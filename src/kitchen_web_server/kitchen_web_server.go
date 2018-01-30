@@ -33,7 +33,7 @@ func main() {
 	// c.AddFunc("@every 10s", func() { times.EveryMinute(&landing_list) })
 	c.Start()
 
-	cache.WebSocketHub.Run()
+	// cache.WebSocketHub.Run()
 
 	r := mux.NewRouter()
 

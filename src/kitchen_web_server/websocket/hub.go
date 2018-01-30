@@ -71,7 +71,7 @@ func (hub *Hub) Broadcast(o orders.Order) {
 }
 
 func (h *Hub) Runfunc() {
-	time.Sleep(10 * time.Second)
+	time.Sleep(5 * time.Second)
 	var o orders.Order
 	bytes := []byte(`{"dorm":"Thorson","itemsOrdered":[{"category":"Pizza","extraIncrement":["Chicken","Bacon"],"increment":"Large","item":"Build Your Own Pizza"}],"name":"Deepak","phone":"55566677777","price":11.5,"OrderID":"5PSW9QjylBRDjIEdJlKkrOrYFJmxQ2nF2BHASr3x"}`)
 	err1 := json.Unmarshal(bytes, &o)

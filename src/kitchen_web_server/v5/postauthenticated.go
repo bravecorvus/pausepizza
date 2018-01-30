@@ -18,7 +18,6 @@ import (
 	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/response"
 	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/sides"
 	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/utils"
-	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/websocket"
 
 	"github.com/gorilla/mux"
 )
@@ -98,8 +97,8 @@ func (obj *ObjectStore) postAuthenticatedGetAPI(w http.ResponseWriter, r *http.R
 		if vars["slug3"] == "" {
 			http.ServeFile(w, r, utils.AssetsDir()+"v5/orders/list.json")
 		}
-	} else if vars["slug2"] == "ws" {
-		websocket.ServeClient(obj.WebSocketHub, w, r)
+		// } else if vars["slug2"] == "ws" {
+		// websocket.ServeClient(obj.WebSocketHub, w, r)
 	}
 
 }
@@ -689,8 +688,8 @@ func (obj *ObjectStore) postAuthenticatedPostAPI(w http.ResponseWriter, r *http.
 			defer resp.Body.Close()
 		}
 
-	} else if vars["slug2"] == "ws" {
-		websocket.ServeClient(obj.WebSocketHub, w, r)
+		// } else if vars["slug2"] == "ws" {
+		// websocket.ServeClient(obj.WebSocketHub, w, r)
 	}
 
 }

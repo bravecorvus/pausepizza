@@ -23,21 +23,15 @@ type Message struct {
 	Payload orders.Order `json:"payload"`
 }
 
-var upgrader = websocket.Upgrader{
-	ReadBufferSize:  1024,
-	WriteBufferSize: 1024,
-	CheckOrigin: func(r *http.Request) bool {
-		return true
-	},
-}
+// var upgrader = websocket.Upgrader{}
 
 func ServeClient(hub *Hub, w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Access-Control-Allow-Origin", "*")
+
 	fmt.Println("SERVE CLIENT")
 	fmt.Println("Before upgrader.Upgrade")
-	var conn, err = upgrader.Upgrade(w, r, nil)
-	fmt.Println("Before upgrader.Upgrade")
-	defer conn.Close()
+	var conn, err = websocket.Upgrade(w, r, nil, 1024, 1024)
+	fmt.Println("After upgrader.Upgrade")
+	// defer conn.Close()
 
 	if err != nil {
 		println("Error in upgrading http to websocket. Check log for more info")
@@ -61,6 +55,7 @@ func ServeClient(hub *Hub, w http.ResponseWriter, r *http.Request) {
 	}
 
 	client.hub.join <- client
+	fmt.Println("YOLO")
 	fmt.Println("client joined", client)
 
 	go client.readMsg()

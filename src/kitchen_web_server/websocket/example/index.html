@@ -95,16 +95,19 @@
 				private: false,
 				privatechatcontainer: '',
 				color: '',
+                payload: null,
 			},
 
 			created() {
 				var self = this
 
-				this.ws = new WebSocket('ws://162.210.90.60:8000/v5/ws')
+				this.ws = new WebSocket('ws://localhost:8000/v5/ws')
+				// this.ws = new WebSocket('ws://162.210.90.60:8000/v5/ws')
 
 				this.ws.addEventListener("message",function(e){
 					var msg = JSON.parse(e.data)
 					// self.$emit('newMess',msg)
+                    this.payload = msg
 					console.log(msg)
 					if (msg.type == "broadcast") {
 						var float = ""
@@ -131,12 +134,27 @@
 
 			methods: {
 				join(){
+
+					console.log(JSON.stringify({
+						type: 				"join",
+						senderID: 			this.username,
+						receiverID: 		"",
+                        payload: this.payload,
+					}))
+
 					this.ws.send(JSON.stringify({
 						type: 				"join",
 						senderID: 			this.username,
 						receiverID: 		"",
-						data: 				"Join",
+                        payload: this.payload,
 					}))
+
+
+	//To      string       `json:"receiverID"`
+	//From    string       `json:"senderID"`
+//	Type    string       `json:'type'`
+//	Payload orders.Order `json:"payload"`
+//	Data    string       `json:"data"`
 					
 					this.joined = true
 				},
