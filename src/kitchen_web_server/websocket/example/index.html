@@ -100,7 +100,7 @@
 			created() {
 				var self = this
 
-				this.ws = new WebSocket('ws://'+window.location.host+'/ws')
+				this.ws = new WebSocket('ws://'+window.location.host+'/v5/ws')
 
 				this.ws.addEventListener("message",function(e){
 					var msg = JSON.parse(e.data)
@@ -136,7 +136,6 @@
 						senderID: 			this.username,
 						receiverID: 		"",
 						data: 				"Join",
-						color: 				this.color
 					}))
 					
 					this.joined = true

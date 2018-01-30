@@ -1,4 +1,4 @@
-package websocket
+package main
 
 import (
 	"fmt"
@@ -18,7 +18,6 @@ type Client struct {
 type Message struct {
 	To      string      `json:"receiverID"`
 	From    string      `json:"senderID"`
-	Type    string      `json:'type'`
 	Payload OrderStruct `json:"payload"`
 }
 
@@ -66,12 +65,12 @@ func (client *Client) readMsg() {
 		}
 
 		// println("Reading from user", string(msg.From), "type: ", string(msg.Type))
-		switch msg.Type {
-		case "broadcast":
-			client.hub.broadcast <- msg
-		case "private":
-			client.hub.private <- msg
-		}
+		// switch msg.Type {
+		// case "broadcast":
+		// client.hub.broadcast <- msg
+		// case "private":
+		client.hub.private <- msg
+		// }
 	}
 }
 

@@ -1,4 +1,4 @@
-package websocket
+package main
 
 type Hub struct {
 	clients   map[string]*Client
@@ -8,7 +8,7 @@ type Hub struct {
 	exit      chan *Client
 }
 
-func () newHub() *Hub {
+func newHub() *Hub {
 	hub := &Hub{
 		clients:   make(map[string]*Client),
 		broadcast: make(chan Message),
@@ -18,15 +18,6 @@ func () newHub() *Hub {
 
 	return hub
 
-}
-
-func (h *Hub) Initialize() {
-	hub := &Hub{
-		clients:   make(map[string]*Client),
-		broadcast: make(chan Message),
-		private:   make(chan Message),
-		join:      make(chan *Client),
-		exit:      make(chan *Client)}
 }
 
 func (hub *Hub) run() {
@@ -40,11 +31,11 @@ func (hub *Hub) run() {
 			}
 		case client := <-hub.exit:
 			println(client)
-		case msg := <-hub.broadcast:
-			// println("[BROADCASTING] message", msg.Data)
-			for _, client := range hub.clients {
-				client.send <- msg
-			}
+		// case msg := <-hub.broadcast:
+		// println("[BROADCASTING] message", msg.Data)
+		// for _, client := range hub.clients {
+		// client.send <- msg
+		// }
 		case msg := <-hub.private:
 			println("to", msg.To)
 			hub.clients[msg.To].send <- msg
@@ -77,9 +68,9 @@ type Token struct {
 }
 
 func (hub *Hub) SendToUser(o OrderStruct) {
-	hub.clients[o.OrderID].send <- Message{To: o.OrderID, Type: "private", Payload: o}
+	hub.clients[o.OrderID].send <- Message{To: o.OrderID, Payload: o}
 }
 
-func (hub *Hub) Broadcast(o OrderStruct) {
-	hub.clients[o.OrderID].send <- Message{To: o.OrderID, Type: "broadcast", Payload: o}
-}
+// func (hub *Hub) Broadcast(o OrderStruct) {
+// hub.clients[o.OrderID].send <- Message{To: o.OrderID, Payload: o}
+// }
