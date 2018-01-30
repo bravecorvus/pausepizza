@@ -117,4 +117,3 @@ go test ./pizza
 ## TODO
 - Statically compiled Docker scratch images
 - Implement SSL to make the API more secure
-
