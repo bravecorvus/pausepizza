@@ -8,8 +8,19 @@ import (
 	"os"
 	"path/filepath"
 
+	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/orders"
+	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/response"
+	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/websocket"
 	"github.com/gorilla/mux"
 )
+
+type ObjectStore struct {
+	WebSocketHub *websocket.Hub
+}
+
+func (obj *ObjectStore) Initialize() {
+	obj.WebSocketHub.Initialize()
+}
 
 type response_struct struct {
 	Status  bool   `json:"status"`
@@ -38,7 +49,7 @@ func AssetsDir() string {
 	return Pwd() + "assets/"
 }
 
-func GetAPI(w http.ResponseWriter, r *http.Request) {
+func (obj *ObjectStore) GetAPI(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 
 	// Landing
@@ -95,15 +106,23 @@ func GetAPI(w http.ResponseWriter, r *http.Request) {
 
 }
 
-func PostAPI(w http.ResponseWriter, r *http.Request) {
+func (obj *ObjectStore) PostAPI(w http.ResponseWriter, r *http.Request) {
 
 	vars := mux.Vars(r)
 	if vars["slug1"] == "checkout" {
 		CheckOut(w, r)
 
 	} else if vars["slug1"] == "ordercomplete" {
-		orderid := vars["slug2"]
-		fmt.Println("Order Complete for order " + orderid)
+		decoder := json.NewDecoder(r.Body)
+		var order orders.Order
+		err := decoder.Decode(&order)
+		if err != nil {
+			json.NewEncoder(w).Encode(response.Response{Status: false, Message: "Couldn't decode ordercomplete object from kitchen server"})
+			fmt.Println(err.Error())
+
+		}
+		defer r.Body.Close()
+		go obj.WebSocketHub.SendToUser(order)
 		json.NewEncoder(w).Encode(response_struct{Status: true, Message: "Order fulfilled POST request received"})
 	}
 }

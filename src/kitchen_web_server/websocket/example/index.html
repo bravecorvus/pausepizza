@@ -100,7 +100,7 @@
 			created() {
 				var self = this
 
-				this.ws = new WebSocket('ws://'+window.location.host+'/v5/ws')
+				this.ws = new WebSocket('ws://http://162.210.90.60/v5/ws')
 
 				this.ws.addEventListener("message",function(e){
 					var msg = JSON.parse(e.data)

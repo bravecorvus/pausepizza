@@ -61,13 +61,16 @@ func (o *OrderList) AddNewOrder(arg *Order) {
 	o.Orders = append(o.Orders, *arg)
 }
 
-func (o *OrderList) RemoveOrderFromList(orderid string) {
+func (o *OrderList) RemoveOrderFromList(orderid string) Order {
+	returnorder := &Order{}
 	for i, order := range o.Orders {
 		if order.OrderID == orderid {
+			*returnorder = order
 			o.Orders = append(o.Orders[:i], o.Orders[i+1:]...)
-			return
+			return *returnorder
 		}
 	}
+	return *returnorder
 }
 
 func (o *OrderList) CheckValidOrder(checkid string) bool {

@@ -34,9 +34,12 @@ func main() {
 	// c.AddFunc("@every 10s", func() { times.EveryMinute(&landing_list) })
 	c.Start()
 
+	cache.WebSocketHub.Run()
+
 	r := mux.NewRouter()
 
 	// API v5
+	// WebSocket
 	// HTTP GET Methods
 	r.HandleFunc("/v5/{slug1}/{slug2}/{slug3}", cache.PreAuthenticatedGetAPI).Methods("GET")
 	r.HandleFunc("/v5/{slug1}/{slug2}", cache.PreAuthenticatedGetAPI).Methods("GET")

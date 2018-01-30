@@ -5,6 +5,7 @@ import (
 	"log"
 	"net/http"
 
+	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/orders"
 	"github.com/gorilla/websocket"
 )
 
@@ -16,15 +17,15 @@ type Client struct {
 }
 
 type Message struct {
-	To      string      `json:"receiverID"`
-	From    string      `json:"senderID"`
-	Type    string      `json:'type'`
-	Payload OrderStruct `json:"payload"`
+	To      string       `json:"receiverID"`
+	From    string       `json:"senderID"`
+	Type    string       `json:'type'`
+	Payload orders.Order `json:"payload"`
 }
 
 var upgrader = websocket.Upgrader{}
 
-func serveClient(hub *Hub, w http.ResponseWriter, r *http.Request) {
+func ServeClient(hub *Hub, w http.ResponseWriter, r *http.Request) {
 	var conn, err = upgrader.Upgrade(w, r, nil)
 
 	if err != nil {

@@ -32,6 +32,7 @@ type PizzaItem struct {
 	Available   bool   `json:"available"`
 	Deliverable bool   `json:"deliverable"`
 	Image       Img    `json:"image"`
+	Api         string `json:"api"`
 }
 
 func (pizza_list *PizzaList) Initialize() {

@@ -1,0 +1,12 @@
+req, err1 := http.NewRequest("POST", "localhost:7000/v5/login", body)
+if err1 != nil {
+  fmt.Println("Coudln't create POST to ordercomplete endpoint on client side")
+}
+req.Header.Set("Content-Type", "application/json")
+
+resp, err2 := http.DefaultClient.Do(req)
+if err2 != nil {
+  fmt.Println("Coudln't POST to ordercomplete endpoint on client side")
+}
+}
+defer resp.Body.Close()

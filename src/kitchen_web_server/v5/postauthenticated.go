@@ -1,6 +1,7 @@
 package v5
 
 import (
+	"bytes"
 	"encoding/json"
 	"fmt"
 	"net/http"
@@ -17,6 +18,7 @@ import (
 	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/response"
 	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/sides"
 	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/utils"
+	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/websocket"
 
 	"github.com/gorilla/mux"
 )
@@ -96,6 +98,8 @@ func (obj *ObjectStore) postAuthenticatedGetAPI(w http.ResponseWriter, r *http.R
 		if vars["slug3"] == "" {
 			http.ServeFile(w, r, utils.AssetsDir()+"v5/orders/list.json")
 		}
+	} else if vars["slug2"] == "ws" {
+		websocket.ServeClient(obj.WebSocketHub, w, r)
 	}
 
 }
@@ -658,21 +662,35 @@ func (obj *ObjectStore) postAuthenticatedPostAPI(w http.ResponseWriter, r *http.
 		defer r.Body.Close()
 		obj.Orders_List.AddNewOrder(&o)
 		obj.Orders_List.WriteFile()
+		obj.WebSocketHub.Broadcast(o)
 
 	} else if vars["slug2"] == "ordercomplete" {
 		orderid := vars["slug3"]
 		fmt.Println("Order Complete for " + orderid)
 		if obj.Orders_List.CheckValidOrder(orderid) {
-			obj.Orders_List.RemoveOrderFromList(orderid)
+			order := &orders.Order{}
+			*order = obj.Orders_List.RemoveOrderFromList(orderid)
 			obj.Orders_List.WriteFile()
+			payloadBytes, err := json.Marshal(obj)
+			if err != nil {
+				fmt.Println("Could not Marshal popped Object item in ordercomplete process")
+			}
+			body := bytes.NewReader(payloadBytes)
+			req, err1 := http.NewRequest("POST", "localhost:7000/v5/login", body)
+			if err1 != nil {
+				fmt.Println("Coudln't create POST to ordercomplete endpoint on client side")
+			}
+			req.Header.Set("Content-Type", "application/json")
+
+			resp, err2 := http.DefaultClient.Do(req)
+			if err2 != nil {
+				fmt.Println("Coudln't POST to ordercomplete endpoint on client side")
+			}
+			defer resp.Body.Close()
 		}
 
-		resp, err := http.Post("http://localhost:8000/v5/ordercomplete/"+orderid, "", nil)
-		if err != nil {
-			fmt.Println(err.Error())
-		}
-		defer resp.Body.Close()
-
+	} else if vars["slug2"] == "ws" {
+		websocket.ServeClient(obj.WebSocketHub, w, r)
 	}
 
 }

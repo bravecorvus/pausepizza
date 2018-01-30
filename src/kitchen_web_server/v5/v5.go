@@ -12,6 +12,7 @@ import (
 	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/orders"
 	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/pizza"
 	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/sides"
+	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/websocket"
 )
 
 // ObjectStore is a large struct which contains pointers to the struct representations of all API endpoints for the Client Side Ordering App.
@@ -58,6 +59,7 @@ type ObjectStore struct {
 	Admins               *auth.ValidUsersList
 	SuperAdmin           *auth.Super
 	Orders_List          *orders.OrderList
+	WebSocketHub         *websocket.Hub
 }
 
 // Initializes the in-program store of all objects that is kept track of by the Pause Kitchen application.
@@ -94,6 +96,7 @@ func (obj *ObjectStore) Initialize() {
 	obj.Admins = &auth.ValidUsersList{}
 	obj.SuperAdmin = &auth.Super{}
 	obj.Orders_List = &orders.OrderList{}
+	obj.WebSocketHub = &websocket.Hub{}
 
 	obj.Pizza_List.Initialize()
 	obj.Pizza_Specialty_List.Initialize()
@@ -119,4 +122,5 @@ func (obj *ObjectStore) Initialize() {
 	obj.Admins.Initialize()
 	obj.SuperAdmin.Initialize()
 	obj.Orders_List.Initialize()
+	obj.WebSocketHub.Initialize()
 }

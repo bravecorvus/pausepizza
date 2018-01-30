@@ -1,5 +1,7 @@
 package websocket
 
+import "github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/orders"
+
 type Hub struct {
 	clients   map[string]*Client
 	broadcast chan Message
@@ -8,7 +10,7 @@ type Hub struct {
 	exit      chan *Client
 }
 
-func () newHub() *Hub {
+func NewHub() *Hub {
 	hub := &Hub{
 		clients:   make(map[string]*Client),
 		broadcast: make(chan Message),
@@ -21,7 +23,7 @@ func () newHub() *Hub {
 }
 
 func (h *Hub) Initialize() {
-	hub := &Hub{
+	h = &Hub{
 		clients:   make(map[string]*Client),
 		broadcast: make(chan Message),
 		private:   make(chan Message),
@@ -29,7 +31,7 @@ func (h *Hub) Initialize() {
 		exit:      make(chan *Client)}
 }
 
-func (hub *Hub) run() {
+func (hub *Hub) Run() {
 	for {
 		select {
 		case client := <-hub.join:
@@ -54,32 +56,10 @@ func (hub *Hub) run() {
 	}
 }
 
-type OrderStruct struct {
-	Dorm    string  `json:"dorm"`
-	Items   []Item  `json:"itemsOrdered"`
-	Name    string  `json:"name"`
-	Phone   string  `json:"phone"`
-	Price   float32 `json:"price"`
-	OrderID string
-}
-
-type Item struct {
-	Category       string   `json:"category"`
-	ExtraIncrement []string `json:"extraIncrement"`
-	Increment      string   `json:"increment"`
-	Item           string   `json:"item"`
-}
-
-type Token struct {
-	AssociatedUser string `json:"associatedUser"`
-	Token          string `json:"value"`
-	Timestamp      string `json:"timestamp"`
-}
-
-func (hub *Hub) SendToUser(o OrderStruct) {
+func (hub *Hub) SendToUser(o orders.Order) {
 	hub.clients[o.OrderID].send <- Message{To: o.OrderID, Type: "private", Payload: o}
 }
 
-func (hub *Hub) Broadcast(o OrderStruct) {
+func (hub *Hub) Broadcast(o orders.Order) {
 	hub.clients[o.OrderID].send <- Message{To: o.OrderID, Type: "broadcast", Payload: o}
 }
