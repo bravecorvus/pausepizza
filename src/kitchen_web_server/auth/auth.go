@@ -9,15 +9,18 @@ import (
 	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/utils"
 )
 
+// Login represents a username and password combination.
 type Login struct {
 	Username string `json:"username"`
 	Password string `json:"password"`
 }
 
+// A list of username+password combos which comprise the kitchen backend admins
 type ValidUsersList struct {
 	ValidUsers []ValidUser `json:"admins"`
 }
 
+// Same as Login (but used as a temporary holding struct for when a login request comes in to differentiate from Login since this is not necessarily a valid user)
 type ValidUser struct {
 	Username string `json:"username"`
 	Password string `json:"password"`

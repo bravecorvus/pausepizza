@@ -1,3 +1,4 @@
+// Package websocket is a partially complete implementation of RFC 6455 WebSockets protocol to allow for bidirectional streaming (which would allow for server to client notifications)
 package websocket
 
 import (

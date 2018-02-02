@@ -1,7 +1,6 @@
-package photoshopjr
-
 // Photoshop Jr. is the code used to convert images to 500x500px images, one that retains the original color and the other turning the image into monochrome.
 // It also can take a valid PNG file and automatically convert it to the correct name and format.
+package photoshopjr
 
 import (
 	"encoding/json"
@@ -21,14 +20,16 @@ import (
 	"github.com/harrydb/go/img/grayscale"
 )
 
+// separateFilenameFromExtension() strips the last 4 characters from a string
 func separateFilenameFromExtension(filename string) string {
 	strippedfilename := filename[0 : len(filename)-4]
 	return strippedfilename
 }
 
+// ProcessImage() is the function which is intially called whenever an image is POSTed to a valid endpoint
+// It's job is to create the intial file, check to see if the filetype is a valid PNG or JPEG
+// Once it confirms it is a valid JPEG or PNG, it calls furtherProcessing() asyncronously (after sending a success response JSON object back to the front-end) because if the image processing gets this far, we can assume the image was valid.
 func ProcessImage(w http.ResponseWriter, r *http.Request, color_filename, mono_filename string) {
-	// fmt.Println("color_filename", color_filename)
-	// fmt.Println("mono_filename", mono_filename)
 	file, header, err := r.FormFile("file")
 	if err != nil {
 		json.NewEncoder(w).Encode(response.Response{Status: false, Message: "Couldn't decode http request"})
@@ -56,6 +57,10 @@ func ProcessImage(w http.ResponseWriter, r *http.Request, color_filename, mono_f
 	_, pngerr := png.Decode(test)
 	if jpgerr != nil && pngerr != nil {
 		json.NewEncoder(w).Encode(response.Response{Status: false, Message: header.Filename + " is not a valid jpeg/png file. Please upload valid image formats"})
+		rmerr := os.Remove(utils.FilesDir() + header.Filename)
+		if rmerr != nil {
+			fmt.Println("Error deleting file: " + utils.FilesDir() + header.Filename)
+		}
 		return
 	} else {
 		json.NewEncoder(w).Encode(response.Response{Status: true, Message: "File uploaded successfully"})
@@ -64,16 +69,13 @@ func ProcessImage(w http.ResponseWriter, r *http.Request, color_filename, mono_f
 
 }
 
+// furtherProcessing() standardizes the photos in the following steps.
+//	1) If image is a PNG, convert to JPEG
+//	2) Rename image to fit the color_filename argument
+//	3) If image is < 500x500px, upsize the image so that the smallest dimention will be exactly 500px, and crop the image to be 500x500. If the image is larger than 500x500px, crop the image to be 500x500px.
 func furtherProcessing(color_filename, mono_filename, current_filename string) {
 
-	// fmt.Println("color", color_filename)
-	// fmt.Println("mono", mono_filename)
-
 	if current_filename[len(current_filename)-3:] == "jpg" || current_filename[len(current_filename)-3:] == "JPG" || current_filename[len(current_filename)-4:] == "JPEG" || current_filename[len(current_filename)-4:] == "jpeg" {
-		// if _, existserr := os.Stat(utils.FilesDir() + color_filename); os.IsExist(existserr) {
-		// fmt.Println("Exists")
-		// os.Remove(utils.FilesDir() + color_filename)
-		// }
 
 		err := os.Rename(utils.FilesDir()+current_filename, utils.FilesDir()+color_filename)
 
