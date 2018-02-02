@@ -7,9 +7,8 @@ import (
 	"strconv"
 	"testing"
 
+	"github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server/utils"
 	"github.com/stretchr/testify/assert"
-
-	"../utils"
 )
 
 // This will check the Initialize function.
