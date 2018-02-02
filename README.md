@@ -1,11 +1,11 @@
 # Backend Implementations
 ---
 ## Golang
-> *Andrew Lee*
+###Andrew Lee<br>
 **Please view Wiki in order to see implement system**
 
 ### Client Ordering Server
-> *Andrew Lee*
+#### Andrew Lee
 
 The client ordering API is internally available at the url `162.210.90.60:8000/v5/...` (can be access anywhere user is on eduroam, or CS 10 Gig)
 
@@ -83,7 +83,7 @@ For example, in order to get the resources of the Pizza endpoint, we will go to 
 
 
 ### Management App
-> *Andrew Lee*
+#### Andrew Lee
 The Management App manipulates the data of the Client Ordering application to reflect changes in the Pause such as the addition of new menu items, the deletion of certain items, running out of food etc.
 
 Unlike the client ordering app, the management app needs to be secure. However, sending the username and password every time to request a resource in a header like this `curl -H "Content-Type: application/json" -X POST -d '{"username":"leeas","password":"abcd"}' 162.210.90.60:7000/v5/pizza` is not ideal as it is transfering sensitive data.
@@ -137,7 +137,7 @@ http://162.210.90.60:7000/v5//landing/set
 
 
 ---
-## Java Customer Ordering Implemented
-> *Roo Kosherbay*
+## Java Customer Ordering Implemented<br>
+### Roo Kosherbay
 
 Java implementation of the static backendend API server for the Customer Ordering App.
