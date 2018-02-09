@@ -3,7 +3,7 @@
 ## Golang
 ### Andrew Lee<br>
 **Please view Wiki in order to see implement system**
-The Kitchen Web Server (which does most of the heavy lifting) has been heavily documented. If you have any questions about code specifically, head over to the project [godocs page](godoc.org/github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server).
+The Kitchen Web Server (which does most of the heavy lifting) has been heavily documented. If you have any questions about code specifically, head over to the project [godocs page](https://godoc.org/github.com/gilgameshskytrooper/pausepizza/src/kitchen_web_server).
 
 ### Client Ordering Server
 #### Andrew Lee
