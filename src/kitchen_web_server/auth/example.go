@@ -1,7 +1,5 @@
 package auth
 
-/*
-
 import (
 	"crypto/tls"
 	"fmt"
@@ -52,8 +50,8 @@ func SendEmail(to, newusername, newpassword string) {
 
 	// ADD VALID GMAIL CREDENTIALS
 	// You will also need to disable secure login on Google for this to work.
-	from = "validgmail@gmail.com"
-	pass = "passwordofvalidgmail"
+	from = "stolafbigdisk@gmail.com"
+	pass = "sk3q&sxfV&K7{^"
 	toarr := []string{}
 	toarr = append(toarr, to)
 	mail := Mail{from, toarr, subject, message}
@@ -113,4 +111,3 @@ func SendEmail(to, newusername, newpassword string) {
 
 	log.Println("Email sent successfully")
 }
-*/
