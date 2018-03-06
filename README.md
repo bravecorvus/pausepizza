@@ -13,21 +13,21 @@ The Kitchen Web Server (which does most of the heavy lifting) has been heavily d
 
 | Package | Summary | Link |
 | -- | -- | -- |
-| main | main function which drives the application | [https://github.com/gilgameshskytrooper/pausepizza/blob/master/src/customer_web_server/customer_web_server.go](https://github.com/gilgameshskytrooper/pausepizza/blob/master/src/customer_web_server/customer_web_server.go) |
-| utils | useful functions used in many places of the application | [https://github.com/gilgameshskytrooper/pausepizza/tree/master/src/customer_web_server/utils](https://github.com/gilgameshskytrooper/pausepizza/tree/master/src/customer_web_server/utils) |
-| orders | package which stores the specific structs used to store the JSON objects within the running app | [https://github.com/gilgameshskytrooper/pausepizza/blob/master/src/customer_web_server/orders/orders.go](https://github.com/gilgameshskytrooper/pausepizza/blob/master/src/customer_web_server/orders/orders.go) |
-| v5 | router version 5 defines the routes of the entire application | [https://github.com/gilgameshskytrooper/pausepizza/tree/master/src/customer_web_server/v5](https://github.com/gilgameshskytrooper/pausepizza/tree/master/src/customer_web_server/v5) |
+| main | main function which drives the application | [link](https://github.com/gilgameshskytrooper/pausepizza/blob/master/src/customer_web_server/customer_web_server.go) |
+| utils | useful functions used in many places of the application | [link](https://github.com/gilgameshskytrooper/pausepizza/tree/master/src/customer_web_server/utils) |
+| orders | package which stores the specific structs used to store the JSON objects within the running app | [link](https://github.com/gilgameshskytrooper/pausepizza/blob/master/src/customer_web_server/orders/orders.go) |
+| v5 | router version 5 defines the routes of the entire application | [link](https://github.com/gilgameshskytrooper/pausepizza/tree/master/src/customer_web_server/v5) |
 
 #### [Kitchen Management App](https://github.com/gilgameshskytrooper/pausepizza/tree/master/src/kitchen_web_server)
 
 | Package | Summary | Link |
 | -- | -- | -- |
-| main | main function which drives the application | [https://github.com/gilgameshskytrooper/pausepizza/blob/master/src/kitchen_web_server/kitchen_web_server.go](https://github.com/gilgameshskytrooper/pausepizza/blob/master/src/kitchen_web_server/kitchen_web_server.go) |
-| auth | package which contains most of the authentication related structs ValidUsersList and TokenList as well as the related functions. | [https://github.com/gilgameshskytrooper/pausepizza/tree/master/src/kitchen_web_server/auth](https://github.com/gilgameshskytrooper/pausepizza/tree/master/src/kitchen_web_server/auth) |
-| appetizers/desserts/drinks/ingredients/landing/orders/pizza/sides | these packages all define all the structs used to hold an in program copy of what is contained in the JSON files as well as the related functions such as initializing them, writing them | [https://github.com/gilgameshskytrooper/pausepizza/tree/master/src/kitchen_web_server](https://github.com/gilgameshskytrooper/pausepizza/tree/master/src/kitchen_web_server) |
-| utils | contains many functions which are generic but are useful in many other packages | [https://github.com/gilgameshskytrooper/pausepizza/blob/master/src/kitchen_web_server/utils/utils.go](https://github.com/gilgameshskytrooper/pausepizza/blob/master/src/kitchen_web_server/utils/utils.go) |
-| photoshopjr | package used to provide server-side image processing | [https://github.com/gilgameshskytrooper/pausepizza/blob/master/src/kitchen_web_server/photoshopjr/photoshopjr.go](https://github.com/gilgameshskytrooper/pausepizza/blob/master/src/kitchen_web_server/photoshopjr/photoshopjr.go) |
-| v5 | router version 5 defines the routes of the entire application as well as the Cache struct which is a parent struct to all other JSON structs (appetizers/desserts/drinks/ingredients/landing/orders/pizza/sides); it also contains, more complex endpoints due to the secure nature of the kitchen management app | [https://github.com/gilgameshskytrooper/pausepizza/tree/master/src/kitchen_web_server/v5](https://github.com/gilgameshskytrooper/pausepizza/tree/master/src/kitchen_web_server/v5) |
+| main | main function which drives the application | [link](https://github.com/gilgameshskytrooper/pausepizza/blob/master/src/kitchen_web_server/kitchen_web_server.go) |
+| auth | package which contains most of the authentication related structs ValidUsersList and TokenList as well as the related functions. | [link](https://github.com/gilgameshskytrooper/pausepizza/tree/master/src/kitchen_web_server/auth) |
+| appetizers/desserts/drinks/ingredients/landing/orders/pizza/sides | these packages all define all the structs used to hold an in program copy of what is contained in the JSON files as well as the related functions such as initializing them, writing them | [link](https://github.com/gilgameshskytrooper/pausepizza/tree/master/src/kitchen_web_server) |
+| utils | contains many functions which are generic but are useful in many other packages | [link](https://github.com/gilgameshskytrooper/pausepizza/blob/master/src/kitchen_web_server/utils/utils.go) |
+| photoshopjr | package used to provide server-side image processing | [link](https://github.com/gilgameshskytrooper/pausepizza/blob/master/src/kitchen_web_server/photoshopjr/photoshopjr.go) |
+| v5 | router version 5 defines the routes of the entire application as well as the Cache struct which is a parent struct to all other JSON structs (appetizers/desserts/drinks/ingredients/landing/orders/pizza/sides); it also contains, more complex endpoints due to the secure nature of the kitchen management app | [link](https://github.com/gilgameshskytrooper/pausepizza/tree/master/src/kitchen_web_server/v5) |
 
 ### Summary
 
